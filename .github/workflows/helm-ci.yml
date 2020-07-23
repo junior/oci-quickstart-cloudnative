@@ -1,0 +1,17 @@
+name: Lint and Test Charts
+
+on:
+  pull_request:
+    paths:
+      - 'deploy/complete/helm-chart/**'
+
+jobs:
+  lint-chart:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+      - name: Run chart-testing (lint)
+        uses: helm/chart-testing-action@master
+        with:
+          command: lint
