@@ -1,0 +1,26 @@
+metrics-server:
+  enabled: true
+
+prometheus:
+  enabled: true
+
+catalog:
+  enabled: true
+
+ingress-nginx:
+  enabled: true
+  controller:
+    metrics:
+      enabled: true
+
+cert-manager:
+  enabled: true
+  installCRDs: true
+
+grafana:
+  enabled: true
+
+jenkins:
+  enabled: false
+
+    
