@@ -1,4 +1,5 @@
 global:
+  bump: 0
   mock:
     service: "false"
   osb:
