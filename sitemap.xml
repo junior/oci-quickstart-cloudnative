@@ -3,289 +3,289 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/introduction/</loc>
+    <loc>https://junior.github.io/oci-quickstart-cloudnative/introduction/</loc>
   </url>
   
   <url>
-    <loc>/cloud/prerequisites/</loc>
+    <loc>https://junior.github.io/oci-quickstart-cloudnative/cloud/prerequisites/</loc>
     <lastmod>2020-03-09T14:51:01-06:00</lastmod>
   </url>
   
   <url>
-    <loc>/quickstart/</loc>
+    <loc>https://junior.github.io/oci-quickstart-cloudnative/quickstart/</loc>
     <lastmod>2020-03-05T15:34:14-07:00</lastmod>
   </url>
   
   <url>
-    <loc>/cloud/setup/</loc>
+    <loc>https://junior.github.io/oci-quickstart-cloudnative/cloud/setup/</loc>
     <lastmod>2020-03-09T15:49:36-06:00</lastmod>
   </url>
   
   <url>
-    <loc>/quickstart/basic/</loc>
+    <loc>https://junior.github.io/oci-quickstart-cloudnative/quickstart/basic/</loc>
     <lastmod>2020-03-06T12:28:12-07:00</lastmod>
   </url>
   
   <url>
-    <loc>/quickstart/kubernetes/</loc>
+    <loc>https://junior.github.io/oci-quickstart-cloudnative/quickstart/kubernetes/</loc>
     <lastmod>2020-03-06T12:27:43-07:00</lastmod>
   </url>
   
   <url>
-    <loc>/observability/monitoring/</loc>
+    <loc>https://junior.github.io/oci-quickstart-cloudnative/observability/monitoring/</loc>
     <lastmod>2020-03-09T16:05:08-06:00</lastmod>
   </url>
   
   <url>
-    <loc>/cloud/deployment/</loc>
+    <loc>https://junior.github.io/oci-quickstart-cloudnative/cloud/deployment/</loc>
     <lastmod>2020-03-09T13:32:46-06:00</lastmod>
   </url>
   
   <url>
-    <loc>/observability/istio/</loc>
+    <loc>https://junior.github.io/oci-quickstart-cloudnative/observability/istio/</loc>
     <lastmod>2020-03-10T13:29:23-06:00</lastmod>
   </url>
   
   <url>
-    <loc>/observability/canary/</loc>
+    <loc>https://junior.github.io/oci-quickstart-cloudnative/observability/canary/</loc>
     <lastmod>2020-03-10T13:29:23-06:00</lastmod>
   </url>
   
   <url>
-    <loc>/observability/oci-monitoring/</loc>
+    <loc>https://junior.github.io/oci-quickstart-cloudnative/observability/oci-monitoring/</loc>
   </url>
   
   <url>
-    <loc>/extras/jenkins/</loc>
+    <loc>https://junior.github.io/oci-quickstart-cloudnative/extras/jenkins/</loc>
     <lastmod>2020-06-24T16:48:49-07:00</lastmod>
   </url>
   
   <url>
-    <loc>/cloud/</loc>
+    <loc>https://junior.github.io/oci-quickstart-cloudnative/cloud/</loc>
     <lastmod>2020-03-09T13:33:46-06:00</lastmod>
   </url>
   
   <url>
-    <loc>/observability/</loc>
+    <loc>https://junior.github.io/oci-quickstart-cloudnative/observability/</loc>
     <lastmod>2020-03-10T13:29:23-06:00</lastmod>
   </url>
   
   <url>
-    <loc>/extras/</loc>
+    <loc>https://junior.github.io/oci-quickstart-cloudnative/extras/</loc>
     <lastmod>2020-03-09T16:04:15-06:00</lastmod>
   </url>
   
   <url>
-    <loc>/cleanup/</loc>
+    <loc>https://junior.github.io/oci-quickstart-cloudnative/cleanup/</loc>
     <lastmod>2020-03-09T16:06:00-06:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/automation/</loc>
+    <loc>https://junior.github.io/oci-quickstart-cloudnative/tags/automation/</loc>
     <lastmod>2020-06-24T16:48:49-07:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/jenkins/</loc>
+    <loc>https://junior.github.io/oci-quickstart-cloudnative/tags/jenkins/</loc>
     <lastmod>2020-06-24T16:48:49-07:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/patching/</loc>
+    <loc>https://junior.github.io/oci-quickstart-cloudnative/tags/patching/</loc>
     <lastmod>2020-06-24T16:48:49-07:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/</loc>
+    <loc>https://junior.github.io/oci-quickstart-cloudnative/tags/</loc>
     <lastmod>2020-06-24T16:48:49-07:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/canary/</loc>
+    <loc>https://junior.github.io/oci-quickstart-cloudnative/tags/canary/</loc>
     <lastmod>2020-03-10T13:29:23-06:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/istio/</loc>
+    <loc>https://junior.github.io/oci-quickstart-cloudnative/tags/istio/</loc>
     <lastmod>2020-03-10T13:29:23-06:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/kiali/</loc>
+    <loc>https://junior.github.io/oci-quickstart-cloudnative/tags/kiali/</loc>
     <lastmod>2020-03-10T13:29:23-06:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/service-mesh/</loc>
+    <loc>https://junior.github.io/oci-quickstart-cloudnative/tags/service-mesh/</loc>
     <lastmod>2020-03-10T13:29:23-06:00</lastmod>
   </url>
   
   <url>
-    <loc>/usage/</loc>
+    <loc>https://junior.github.io/oci-quickstart-cloudnative/usage/</loc>
     <lastmod>2020-03-10T10:02:31-06:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/cleanup/</loc>
+    <loc>https://junior.github.io/oci-quickstart-cloudnative/tags/cleanup/</loc>
     <lastmod>2020-03-09T16:06:00-06:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/deprovision/</loc>
+    <loc>https://junior.github.io/oci-quickstart-cloudnative/tags/deprovision/</loc>
     <lastmod>2020-03-09T16:06:00-06:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/uninstall/</loc>
+    <loc>https://junior.github.io/oci-quickstart-cloudnative/tags/uninstall/</loc>
     <lastmod>2020-03-09T16:06:00-06:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/helm/</loc>
+    <loc>https://junior.github.io/oci-quickstart-cloudnative/tags/helm/</loc>
     <lastmod>2020-03-09T15:49:36-06:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/kubernetes/</loc>
+    <loc>https://junior.github.io/oci-quickstart-cloudnative/tags/kubernetes/</loc>
     <lastmod>2020-03-09T15:49:36-06:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/setup/</loc>
+    <loc>https://junior.github.io/oci-quickstart-cloudnative/tags/setup/</loc>
     <lastmod>2020-03-09T15:49:36-06:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/api-key/</loc>
+    <loc>https://junior.github.io/oci-quickstart-cloudnative/tags/api-key/</loc>
     <lastmod>2020-03-09T14:51:01-06:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/compartment/</loc>
+    <loc>https://junior.github.io/oci-quickstart-cloudnative/tags/compartment/</loc>
     <lastmod>2020-03-09T14:51:01-06:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/policies/</loc>
+    <loc>https://junior.github.io/oci-quickstart-cloudnative/tags/policies/</loc>
     <lastmod>2020-03-09T14:51:01-06:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/region/</loc>
+    <loc>https://junior.github.io/oci-quickstart-cloudnative/tags/region/</loc>
     <lastmod>2020-03-09T14:51:01-06:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/cloud-services/</loc>
+    <loc>https://junior.github.io/oci-quickstart-cloudnative/tags/cloud-services/</loc>
     <lastmod>2020-03-09T13:33:46-06:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/deployment/</loc>
+    <loc>https://junior.github.io/oci-quickstart-cloudnative/tags/deployment/</loc>
     <lastmod>2020-03-09T13:33:46-06:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/oci/</loc>
+    <loc>https://junior.github.io/oci-quickstart-cloudnative/tags/oci/</loc>
     <lastmod>2020-03-09T13:33:46-06:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/provision/</loc>
+    <loc>https://junior.github.io/oci-quickstart-cloudnative/tags/provision/</loc>
     <lastmod>2020-03-09T13:32:46-06:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/secrets/</loc>
+    <loc>https://junior.github.io/oci-quickstart-cloudnative/tags/secrets/</loc>
     <lastmod>2020-03-09T13:32:46-06:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/serverless/</loc>
+    <loc>https://junior.github.io/oci-quickstart-cloudnative/tags/serverless/</loc>
     <lastmod>2020-03-09T13:32:46-06:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/service-broker/</loc>
+    <loc>https://junior.github.io/oci-quickstart-cloudnative/tags/service-broker/</loc>
     <lastmod>2020-03-09T13:32:46-06:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/atp/</loc>
+    <loc>https://junior.github.io/oci-quickstart-cloudnative/tags/atp/</loc>
     <lastmod>2020-03-06T12:28:12-07:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/free/</loc>
+    <loc>https://junior.github.io/oci-quickstart-cloudnative/tags/free/</loc>
     <lastmod>2020-03-06T12:28:12-07:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/resource-manager/</loc>
+    <loc>https://junior.github.io/oci-quickstart-cloudnative/tags/resource-manager/</loc>
     <lastmod>2020-03-06T12:28:12-07:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/terraform/</loc>
+    <loc>https://junior.github.io/oci-quickstart-cloudnative/tags/terraform/</loc>
     <lastmod>2020-03-06T12:28:12-07:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/mock-mode/</loc>
+    <loc>https://junior.github.io/oci-quickstart-cloudnative/tags/mock-mode/</loc>
     <lastmod>2020-03-06T12:27:43-07:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/oke/</loc>
+    <loc>https://junior.github.io/oci-quickstart-cloudnative/tags/oke/</loc>
     <lastmod>2020-03-06T12:27:43-07:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/quickstart/</loc>
+    <loc>https://junior.github.io/oci-quickstart-cloudnative/tags/quickstart/</loc>
     <lastmod>2020-03-05T15:34:14-07:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/source-code/</loc>
+    <loc>https://junior.github.io/oci-quickstart-cloudnative/tags/source-code/</loc>
     <lastmod>2020-03-05T15:34:14-07:00</lastmod>
   </url>
   
   <url>
-    <loc>/resources/</loc>
+    <loc>https://junior.github.io/oci-quickstart-cloudnative/resources/</loc>
     <lastmod>2020-03-03T12:51:44-07:00</lastmod>
   </url>
   
   <url>
-    <loc>/</loc>
+    <loc>https://junior.github.io/oci-quickstart-cloudnative/</loc>
     <lastmod>2020-02-28T08:19:07-07:00</lastmod>
   </url>
   
   <url>
-    <loc>/acknowledgements/</loc>
+    <loc>https://junior.github.io/oci-quickstart-cloudnative/acknowledgements/</loc>
   </url>
   
   <url>
-    <loc>/categories/</loc>
+    <loc>https://junior.github.io/oci-quickstart-cloudnative/categories/</loc>
   </url>
   
   <url>
-    <loc>/tags/ci/cd/</loc>
+    <loc>https://junior.github.io/oci-quickstart-cloudnative/tags/ci/cd/</loc>
   </url>
   
   <url>
-    <loc>/tags/oci-health-checks/</loc>
+    <loc>https://junior.github.io/oci-quickstart-cloudnative/tags/oci-health-checks/</loc>
   </url>
   
   <url>
-    <loc>/observability/oci-healthcheck/</loc>
+    <loc>https://junior.github.io/oci-quickstart-cloudnative/observability/oci-healthcheck/</loc>
   </url>
   
   <url>
-    <loc>/tags/oci-monitoring/</loc>
+    <loc>https://junior.github.io/oci-quickstart-cloudnative/tags/oci-monitoring/</loc>
   </url>
   
   <url>
-    <loc>/tags/oci-observability/</loc>
+    <loc>https://junior.github.io/oci-quickstart-cloudnative/tags/oci-observability/</loc>
   </url>
   
 </urlset>
