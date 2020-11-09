@@ -2,336 +2,336 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on MuShop</title>
-    <link>/tags/</link>
+    <link>https://oracle-quickstart.github.io/oci-cloudnative/tags/</link>
     <description>Recent content in Tags on MuShop</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 24 Jun 2020 16:48:49 -0700</lastBuildDate>
     
-	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://oracle-quickstart.github.io/oci-cloudnative/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Automation</title>
-      <link>/tags/automation/</link>
+      <link>https://oracle-quickstart.github.io/oci-cloudnative/tags/automation/</link>
       <pubDate>Wed, 24 Jun 2020 16:48:49 -0700</pubDate>
       
-      <guid>/tags/automation/</guid>
+      <guid>https://oracle-quickstart.github.io/oci-cloudnative/tags/automation/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Jenkins</title>
-      <link>/tags/jenkins/</link>
+      <link>https://oracle-quickstart.github.io/oci-cloudnative/tags/jenkins/</link>
       <pubDate>Wed, 24 Jun 2020 16:48:49 -0700</pubDate>
       
-      <guid>/tags/jenkins/</guid>
+      <guid>https://oracle-quickstart.github.io/oci-cloudnative/tags/jenkins/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Patching</title>
-      <link>/tags/patching/</link>
+      <link>https://oracle-quickstart.github.io/oci-cloudnative/tags/patching/</link>
       <pubDate>Wed, 24 Jun 2020 16:48:49 -0700</pubDate>
       
-      <guid>/tags/patching/</guid>
+      <guid>https://oracle-quickstart.github.io/oci-cloudnative/tags/patching/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Canary</title>
-      <link>/tags/canary/</link>
+      <link>https://oracle-quickstart.github.io/oci-cloudnative/tags/canary/</link>
       <pubDate>Tue, 10 Mar 2020 13:29:23 -0600</pubDate>
       
-      <guid>/tags/canary/</guid>
+      <guid>https://oracle-quickstart.github.io/oci-cloudnative/tags/canary/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Istio</title>
-      <link>/tags/istio/</link>
+      <link>https://oracle-quickstart.github.io/oci-cloudnative/tags/istio/</link>
       <pubDate>Tue, 10 Mar 2020 13:29:23 -0600</pubDate>
       
-      <guid>/tags/istio/</guid>
+      <guid>https://oracle-quickstart.github.io/oci-cloudnative/tags/istio/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Kiali</title>
-      <link>/tags/kiali/</link>
+      <link>https://oracle-quickstart.github.io/oci-cloudnative/tags/kiali/</link>
       <pubDate>Tue, 10 Mar 2020 13:29:23 -0600</pubDate>
       
-      <guid>/tags/kiali/</guid>
+      <guid>https://oracle-quickstart.github.io/oci-cloudnative/tags/kiali/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Service Mesh</title>
-      <link>/tags/service-mesh/</link>
+      <link>https://oracle-quickstart.github.io/oci-cloudnative/tags/service-mesh/</link>
       <pubDate>Tue, 10 Mar 2020 13:29:23 -0600</pubDate>
       
-      <guid>/tags/service-mesh/</guid>
+      <guid>https://oracle-quickstart.github.io/oci-cloudnative/tags/service-mesh/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Cleanup</title>
-      <link>/tags/cleanup/</link>
+      <link>https://oracle-quickstart.github.io/oci-cloudnative/tags/cleanup/</link>
       <pubDate>Mon, 09 Mar 2020 16:06:00 -0600</pubDate>
       
-      <guid>/tags/cleanup/</guid>
+      <guid>https://oracle-quickstart.github.io/oci-cloudnative/tags/cleanup/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Deprovision</title>
-      <link>/tags/deprovision/</link>
+      <link>https://oracle-quickstart.github.io/oci-cloudnative/tags/deprovision/</link>
       <pubDate>Mon, 09 Mar 2020 16:06:00 -0600</pubDate>
       
-      <guid>/tags/deprovision/</guid>
+      <guid>https://oracle-quickstart.github.io/oci-cloudnative/tags/deprovision/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Uninstall</title>
-      <link>/tags/uninstall/</link>
+      <link>https://oracle-quickstart.github.io/oci-cloudnative/tags/uninstall/</link>
       <pubDate>Mon, 09 Mar 2020 16:06:00 -0600</pubDate>
       
-      <guid>/tags/uninstall/</guid>
+      <guid>https://oracle-quickstart.github.io/oci-cloudnative/tags/uninstall/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Helm</title>
-      <link>/tags/helm/</link>
+      <link>https://oracle-quickstart.github.io/oci-cloudnative/tags/helm/</link>
       <pubDate>Mon, 09 Mar 2020 15:49:36 -0600</pubDate>
       
-      <guid>/tags/helm/</guid>
+      <guid>https://oracle-quickstart.github.io/oci-cloudnative/tags/helm/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Kubernetes</title>
-      <link>/tags/kubernetes/</link>
+      <link>https://oracle-quickstart.github.io/oci-cloudnative/tags/kubernetes/</link>
       <pubDate>Mon, 09 Mar 2020 15:49:36 -0600</pubDate>
       
-      <guid>/tags/kubernetes/</guid>
+      <guid>https://oracle-quickstart.github.io/oci-cloudnative/tags/kubernetes/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Setup</title>
-      <link>/tags/setup/</link>
+      <link>https://oracle-quickstart.github.io/oci-cloudnative/tags/setup/</link>
       <pubDate>Mon, 09 Mar 2020 15:49:36 -0600</pubDate>
       
-      <guid>/tags/setup/</guid>
+      <guid>https://oracle-quickstart.github.io/oci-cloudnative/tags/setup/</guid>
       <description></description>
     </item>
     
     <item>
       <title>API Key</title>
-      <link>/tags/api-key/</link>
+      <link>https://oracle-quickstart.github.io/oci-cloudnative/tags/api-key/</link>
       <pubDate>Mon, 09 Mar 2020 14:51:01 -0600</pubDate>
       
-      <guid>/tags/api-key/</guid>
+      <guid>https://oracle-quickstart.github.io/oci-cloudnative/tags/api-key/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Compartment</title>
-      <link>/tags/compartment/</link>
+      <link>https://oracle-quickstart.github.io/oci-cloudnative/tags/compartment/</link>
       <pubDate>Mon, 09 Mar 2020 14:51:01 -0600</pubDate>
       
-      <guid>/tags/compartment/</guid>
+      <guid>https://oracle-quickstart.github.io/oci-cloudnative/tags/compartment/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Policies</title>
-      <link>/tags/policies/</link>
+      <link>https://oracle-quickstart.github.io/oci-cloudnative/tags/policies/</link>
       <pubDate>Mon, 09 Mar 2020 14:51:01 -0600</pubDate>
       
-      <guid>/tags/policies/</guid>
+      <guid>https://oracle-quickstart.github.io/oci-cloudnative/tags/policies/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Region</title>
-      <link>/tags/region/</link>
+      <link>https://oracle-quickstart.github.io/oci-cloudnative/tags/region/</link>
       <pubDate>Mon, 09 Mar 2020 14:51:01 -0600</pubDate>
       
-      <guid>/tags/region/</guid>
+      <guid>https://oracle-quickstart.github.io/oci-cloudnative/tags/region/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Cloud Services</title>
-      <link>/tags/cloud-services/</link>
+      <link>https://oracle-quickstart.github.io/oci-cloudnative/tags/cloud-services/</link>
       <pubDate>Mon, 09 Mar 2020 13:33:46 -0600</pubDate>
       
-      <guid>/tags/cloud-services/</guid>
+      <guid>https://oracle-quickstart.github.io/oci-cloudnative/tags/cloud-services/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Deployment</title>
-      <link>/tags/deployment/</link>
+      <link>https://oracle-quickstart.github.io/oci-cloudnative/tags/deployment/</link>
       <pubDate>Mon, 09 Mar 2020 13:33:46 -0600</pubDate>
       
-      <guid>/tags/deployment/</guid>
+      <guid>https://oracle-quickstart.github.io/oci-cloudnative/tags/deployment/</guid>
       <description></description>
     </item>
     
     <item>
       <title>OCI</title>
-      <link>/tags/oci/</link>
+      <link>https://oracle-quickstart.github.io/oci-cloudnative/tags/oci/</link>
       <pubDate>Mon, 09 Mar 2020 13:33:46 -0600</pubDate>
       
-      <guid>/tags/oci/</guid>
+      <guid>https://oracle-quickstart.github.io/oci-cloudnative/tags/oci/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Provision</title>
-      <link>/tags/provision/</link>
+      <link>https://oracle-quickstart.github.io/oci-cloudnative/tags/provision/</link>
       <pubDate>Mon, 09 Mar 2020 13:32:46 -0600</pubDate>
       
-      <guid>/tags/provision/</guid>
+      <guid>https://oracle-quickstart.github.io/oci-cloudnative/tags/provision/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Secrets</title>
-      <link>/tags/secrets/</link>
+      <link>https://oracle-quickstart.github.io/oci-cloudnative/tags/secrets/</link>
       <pubDate>Mon, 09 Mar 2020 13:32:46 -0600</pubDate>
       
-      <guid>/tags/secrets/</guid>
+      <guid>https://oracle-quickstart.github.io/oci-cloudnative/tags/secrets/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Serverless</title>
-      <link>/tags/serverless/</link>
+      <link>https://oracle-quickstart.github.io/oci-cloudnative/tags/serverless/</link>
       <pubDate>Mon, 09 Mar 2020 13:32:46 -0600</pubDate>
       
-      <guid>/tags/serverless/</guid>
+      <guid>https://oracle-quickstart.github.io/oci-cloudnative/tags/serverless/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Service Broker</title>
-      <link>/tags/service-broker/</link>
+      <link>https://oracle-quickstart.github.io/oci-cloudnative/tags/service-broker/</link>
       <pubDate>Mon, 09 Mar 2020 13:32:46 -0600</pubDate>
       
-      <guid>/tags/service-broker/</guid>
+      <guid>https://oracle-quickstart.github.io/oci-cloudnative/tags/service-broker/</guid>
       <description></description>
     </item>
     
     <item>
       <title>ATP</title>
-      <link>/tags/atp/</link>
+      <link>https://oracle-quickstart.github.io/oci-cloudnative/tags/atp/</link>
       <pubDate>Fri, 06 Mar 2020 12:28:12 -0700</pubDate>
       
-      <guid>/tags/atp/</guid>
+      <guid>https://oracle-quickstart.github.io/oci-cloudnative/tags/atp/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Free</title>
-      <link>/tags/free/</link>
+      <link>https://oracle-quickstart.github.io/oci-cloudnative/tags/free/</link>
       <pubDate>Fri, 06 Mar 2020 12:28:12 -0700</pubDate>
       
-      <guid>/tags/free/</guid>
+      <guid>https://oracle-quickstart.github.io/oci-cloudnative/tags/free/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Resource Manager</title>
-      <link>/tags/resource-manager/</link>
+      <link>https://oracle-quickstart.github.io/oci-cloudnative/tags/resource-manager/</link>
       <pubDate>Fri, 06 Mar 2020 12:28:12 -0700</pubDate>
       
-      <guid>/tags/resource-manager/</guid>
+      <guid>https://oracle-quickstart.github.io/oci-cloudnative/tags/resource-manager/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Terraform</title>
-      <link>/tags/terraform/</link>
+      <link>https://oracle-quickstart.github.io/oci-cloudnative/tags/terraform/</link>
       <pubDate>Fri, 06 Mar 2020 12:28:12 -0700</pubDate>
       
-      <guid>/tags/terraform/</guid>
+      <guid>https://oracle-quickstart.github.io/oci-cloudnative/tags/terraform/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Mock Mode</title>
-      <link>/tags/mock-mode/</link>
+      <link>https://oracle-quickstart.github.io/oci-cloudnative/tags/mock-mode/</link>
       <pubDate>Fri, 06 Mar 2020 12:27:43 -0700</pubDate>
       
-      <guid>/tags/mock-mode/</guid>
+      <guid>https://oracle-quickstart.github.io/oci-cloudnative/tags/mock-mode/</guid>
       <description></description>
     </item>
     
     <item>
       <title>OKE</title>
-      <link>/tags/oke/</link>
+      <link>https://oracle-quickstart.github.io/oci-cloudnative/tags/oke/</link>
       <pubDate>Fri, 06 Mar 2020 12:27:43 -0700</pubDate>
       
-      <guid>/tags/oke/</guid>
+      <guid>https://oracle-quickstart.github.io/oci-cloudnative/tags/oke/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Quickstart</title>
-      <link>/tags/quickstart/</link>
+      <link>https://oracle-quickstart.github.io/oci-cloudnative/tags/quickstart/</link>
       <pubDate>Thu, 05 Mar 2020 15:34:14 -0700</pubDate>
       
-      <guid>/tags/quickstart/</guid>
+      <guid>https://oracle-quickstart.github.io/oci-cloudnative/tags/quickstart/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Source code</title>
-      <link>/tags/source-code/</link>
+      <link>https://oracle-quickstart.github.io/oci-cloudnative/tags/source-code/</link>
       <pubDate>Thu, 05 Mar 2020 15:34:14 -0700</pubDate>
       
-      <guid>/tags/source-code/</guid>
+      <guid>https://oracle-quickstart.github.io/oci-cloudnative/tags/source-code/</guid>
       <description></description>
     </item>
     
     <item>
       <title>CI/CD</title>
-      <link>/tags/ci/cd/</link>
+      <link>https://oracle-quickstart.github.io/oci-cloudnative/tags/ci/cd/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/tags/ci/cd/</guid>
+      <guid>https://oracle-quickstart.github.io/oci-cloudnative/tags/ci/cd/</guid>
       <description></description>
     </item>
     
     <item>
       <title>OCI Health Checks</title>
-      <link>/tags/oci-health-checks/</link>
+      <link>https://oracle-quickstart.github.io/oci-cloudnative/tags/oci-health-checks/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/tags/oci-health-checks/</guid>
+      <guid>https://oracle-quickstart.github.io/oci-cloudnative/tags/oci-health-checks/</guid>
       <description></description>
     </item>
     
     <item>
       <title>OCI Monitoring</title>
-      <link>/tags/oci-monitoring/</link>
+      <link>https://oracle-quickstart.github.io/oci-cloudnative/tags/oci-monitoring/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/tags/oci-monitoring/</guid>
+      <guid>https://oracle-quickstart.github.io/oci-cloudnative/tags/oci-monitoring/</guid>
       <description></description>
     </item>
     
     <item>
       <title>OCI Observability</title>
-      <link>/tags/oci-observability/</link>
+      <link>https://oracle-quickstart.github.io/oci-cloudnative/tags/oci-observability/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/tags/oci-observability/</guid>
+      <guid>https://oracle-quickstart.github.io/oci-cloudnative/tags/oci-observability/</guid>
       <description></description>
     </item>
     
