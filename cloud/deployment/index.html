@@ -735,10 +735,10 @@ values:</p>
 </table>
 <div uk-grid class="switcher-border uk-margin-bottom uk-grid-small ">
   <div class="uk-width-1-1 ">
-    <ul class="uk-tab" uk-tab="connect: #switcher-57"><li><a href="#">Manual Steps</a></li><li><a href="#">Automated (Using OCI Service Broker)</a></li></ul>
+    <ul class="uk-tab" uk-tab="connect: #switcher-138"><li><a href="#">Manual Steps</a></li><li><a href="#">Automated (Using OCI Service Broker)</a></li></ul>
   </div>
   <div class="">
-    <ul id='switcher-57' class='uk-switcher'>
+    <ul id='switcher-138' class='uk-switcher'>
 <li>
 <p>Follow the steps outlined below to provision and configure the cluster with cloud service connection details.</p>
 <h3 id="atp-database">ATP Database</h3>
@@ -841,14 +841,14 @@ secret to the <code>mushop-utilities</code> namespace:</p>
 <li>
 <p>Deploy the OCI service broker on your cluster. This is done with the <a href="https://github.com/oracle/oci-service-broker">Oracle OCI Service Broker</a> helm chart:</p>
 <pre><code class="language-shell--helm2" data-lang="shell--helm2">helm install \
-  https://github.com/oracle/oci-service-broker/releases/download/v1.5.1/oci-service-broker-1.5.1.tgz \
+  https://github.com/oracle/oci-service-broker/releases/download/v1.5.2/oci-service-broker-1.5.2.tgz \
   --namespace mushop-utilities \
   --name oci-broker \
   --set ociCredentials.secretName=oci-credentials \
   --set storage.etcd.useEmbedded=true \
   --set tls.enabled=false
 </code></pre><pre><code class="language-shell--helm3" data-lang="shell--helm3">helm install oci-broker \
-  https://github.com/oracle/oci-service-broker/releases/download/v1.5.1/oci-service-broker-1.5.1.tgz \
+  https://github.com/oracle/oci-service-broker/releases/download/v1.5.2/oci-service-broker-1.5.2.tgz \
   --namespace mushop-utilities \
   --set ociCredentials.secretName=oci-credentials \
   --set storage.etcd.useEmbedded=true \
