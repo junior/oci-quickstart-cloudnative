@@ -98,6 +98,7 @@ The following diagram shows the topology created by this stack.
 ![MuShop Complete Infra](./images/complete/00-Topology.png)
 
 #### [![Deploy to Oracle Cloud][magic_button]][magic_mushop_stack]
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fjunior%2Foci-quickstart-cloudnative.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fjunior%2Foci-quickstart-cloudnative?ref=badge_shield)
 
 ## Questions
 
@@ -111,3 +112,7 @@ If you have an issue or a question, please take a look at our [FAQs](./deploy/ba
 [magic_button]: https://oci-resourcemanager-plugin.plugins.oci.oraclecloud.com/latest/deploy-to-oracle-cloud.svg
 [magic_mushop_basic_stack]: https://cloud.oracle.com/resourcemanager/stacks/create?zipUrl=https://github.com/oracle-quickstart/oci-cloudnative/releases/latest/download/mushop-basic-stack-latest.zip
 [magic_mushop_stack]: https://cloud.oracle.com/resourcemanager/stacks/create?zipUrl=https://github.com/oracle-quickstart/oci-cloudnative/releases/latest/download/mushop-stack-latest.zip
+
+
+## License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fjunior%2Foci-quickstart-cloudnative.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fjunior%2Foci-quickstart-cloudnative?ref=badge_large)
