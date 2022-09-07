@@ -47,10 +47,6 @@ output "autonomous_database_password" {
   value     = random_string.autonomous_database_admin_password.result
   sensitive = true
 }
-output "grafana_admin_password" {
-  value     = var.grafana_enabled ? local.grafana_admin_password : null
-  sensitive = true
-}
 output "mushop_source_code" {
   value = "https://github.com/oracle-quickstart/oci-cloudnative/"
 }
@@ -66,5 +62,5 @@ locals {
   mushop_ingress_ip_hex   = var.ingress_nginx_enabled ? join("", formatlist("%02x", split(".", data.kubernetes_service.mushop_ingress.0.status.0.load_balancer.0.ingress.0.ip))) : "#Ingress_Not_Deployed"
   mushop_ingress_hostname = var.ingress_nginx_enabled ? (data.kubernetes_service.mushop_ingress.0.status.0.load_balancer.0.ingress.0.hostname == "" ? local.mushop_ingress_ip : data.kubernetes_service.mushop_ingress.0.status.0.load_balancer.0.ingress.0.hostname) : "#Ingress_Not_Deployed"
   mushop_url_protocol     = var.ingress_tls ? "https" : "http"
-  grafana_admin_password  = var.grafana_enabled ? data.kubernetes_secret.mushop_utils_grafana.0.data.admin-password : "Grafana_Not_Deployed"
+  
 }
