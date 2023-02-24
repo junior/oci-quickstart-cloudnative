@@ -11,7 +11,7 @@
   "dependencies": {
     "autocomplete.js": "^0.37.1",
     "lunr": "^2.3.9",
-    "mermaid": "^8.8.4",
+    "mermaid": "^9.0.0",
     "uikit": "3.6.5",
     "whatwg-fetch": "^3.5.0"
   }
