@@ -103,7 +103,7 @@ RUN rm -rf node_modules products hero *.md
 ###############################
 
 # ##### Go Builder image
-FROM --platform=linux/amd64 golang:1.17 AS catalogue-builder-amd64
+FROM --platform=linux/amd64 golang:1.19.6 AS catalogue-builder-amd64
 
 WORKDIR /go/src/mushop/catalogue
 
@@ -133,7 +133,7 @@ RUN GO111MODULE=on GOARCH=amd64 GOOS=linux \
 ###############################
 
 # ##### Go Builder image
-FROM --platform=linux/arm64 golang:1.17 AS catalogue-builder-arm64
+FROM --platform=linux/arm64 golang:1.19.6 AS catalogue-builder-arm64
 
 WORKDIR /go/src/mushop/catalogue
 
