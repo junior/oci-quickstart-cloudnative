@@ -29,7 +29,7 @@ RUN gu install native-image
 RUN native-image --no-server  -cp libs/fulfillment-*-all.jar
 
 # Step 4 : Build the final application image
-FROM frolvlad/alpine-glibc
+FROM frolvlad/alpine-glibc:alpine-3.17_glibc-2.34
 RUN apk update && apk add libstdc++
 EXPOSE 80
 COPY --from=graalvm /home/app/fulfillment/fulfillment /app/fulfillment
