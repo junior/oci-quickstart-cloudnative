@@ -14,7 +14,7 @@
     "axios": "^0.21.4",
     "core-js": "^3.13.1",
     "echarts": "^5.2.1",
-    "uikit": "3.6.22"
+    "uikit": "3.16.26"
   },
   "devDependencies": {
     "@babel/core": "^7.14.3",
