@@ -22,7 +22,7 @@
         <jsonb.version>1.0.2</jsonb.version>
         <yasson.version>1.0.6</yasson.version>
         <jdbc.version>19.6.0.0</jdbc.version>
-        <soda.version>1.1.4</soda.version>
+        <soda.version>1.1.7.2</soda.version>
         <mainClass>mushop.carts.Main</mainClass>
         <libs.classpath.prefix>libs</libs.classpath.prefix>
         <copied.libs.dir>${project.build.directory}/${libs.classpath.prefix}</copied.libs.dir>
