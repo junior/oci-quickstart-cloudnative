@@ -29,7 +29,7 @@
   },
   "dependencies": {
     "@digikare/nestjs-prom": "^0.2.1",
-    "@godaddy/terminus": "^4.2.0",
+    "@godaddy/terminus": "^4.12.1",
     "@nestjs/common": "^6.7.1",
     "@nestjs/core": "^6.7.1",
     "@nestjs/passport": "^6.1.0",
