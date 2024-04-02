@@ -19,7 +19,7 @@
   <meta name="msapplication-TileColor" content="#c74634">
   <meta name="theme-color" content="#fcfbfa">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-  <link rel="stylesheet" type="text/css" href="../../../sass/main.min.579b1ef900caab9f4034f2fab782c459ab9ddb6c2dd914fed6155812ffd82484.css" integrity="sha256-V5se&#43;QDKq59ANPL6t4LEWaud22wt2RT&#43;1hVYEv/YJIQ=">
+  <link rel="stylesheet" type="text/css" href="../../../sass/main.min.dbe9c3072d7bdad30ac85b1cb73ead5c6a4aff7886c67d30be6a911035f04a4f.css" integrity="sha256-2&#43;nDBy172tMKyFsctz6tXGpK/3iGxn0wvmqREDXwSk8=">
   <link rel="stylesheet" type="text/css" href="../../../fonts/fonts.min.58744946497c59fa8a6ac77636ea480457079e54512cf3dcb552592b56503cc1.css" integrity="sha256-WHRJRkl8WfqKasd2NupIBFcHnlRRLPPctVJZK1ZQPME=">
   <link rel="stylesheet" type="text/css" href="../../../sass/mushop.min.c31ca585e7b3a90dfeb2fd0ac2d7d93ff0af82ea19b0cab20c8539d987761606.css" integrity="sha256-wxylheezqQ3&#43;sv0KwtfZP/CvguoZsMqyDIU52Yd2FgY=">
 </head>
@@ -760,33 +760,33 @@
 </li>
 <li>
 <p>Deploy</p>
-<pre><code>cd deploy/complete/kubernetes
-</code></pre><div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">kubectl -n mushop apply -f mushop.yaml
-</code></pre></div><p>Wait for services to be Ready</p>
-<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">kubectl get pod --watch --namespace mushop
-</code></pre></div></li>
+<pre tabindex="0"><code>cd deploy/complete/kubernetes
+</code></pre><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">kubectl -n mushop apply -f mushop.yaml
+</span></span></code></pre></div><p>Wait for services to be Ready</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">kubectl get pod --watch --namespace mushop
+</span></span></code></pre></div></li>
 <li>
 <p>Expose</p>
 </li>
 </ul>
 <div uk-grid class=" uk-margin-bottom uk-grid-small ">
   <div class="uk-width-1-1 uk-width-auto@m">
-    <ul class="uk-tab-left uk-text-large" uk-tab="connect: #switcher-284"><li><a href="#">Local</a></li><li><a href="#">Ingress</a></li></ul>
+    <ul class="uk-tab-left uk-text-large" uk-tab="connect: #switcher-68"><li><a href="#">Local</a></li><li><a href="#">Ingress</a></li></ul>
   </div>
   <div class="uk-width-expand@m">
-    <ul id='switcher-284' class='uk-switcher'>
+    <ul id='switcher-68' class='uk-switcher'>
 <li>
 <p>Use port-forward to expose the service</p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">  kubectl port-forward <span class="se">\
-</span><span class="se"></span>  --namespace mushop <span class="se">\
-</span><span class="se"></span>  svc/edge 8000:80
-</code></pre></div><p>Open browser <a href="http://localhost:8000">http://localhost:8000</a>;</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">  kubectl port-forward <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>  --namespace mushop <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>  svc/edge 8000:80
+</span></span></code></pre></div><p>Open browser <a href="http://localhost:8000">http://localhost:8000</a>;</p>
 </li>
 <li>
 <p>Fetch the External IP</p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">kubectl get svc mushop-utils-ingress-nginx-controller <span class="se">\
-</span><span class="se"></span>--namespace mushop-utilities
-</code></pre></div><p>Open browser http://&lt;EXTERNAL-IP&gt;:8000</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">kubectl get svc mushop-utils-ingress-nginx-controller <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>--namespace mushop-utilities
+</span></span></code></pre></div><p>Open browser http://&lt;EXTERNAL-IP&gt;:8000</p>
 </li>
 </ul>
   </div>
@@ -822,8 +822,8 @@ Please do not reply directly to this email. If you have any questions or comment
 <p>In this section we will be enabling OCI (Oracle Cloud Infrastructure) logging for OKE (Oracle Cloud Infrastructure Container Engine for Kubernetes) worker nodes.</p>
 <p>All the OKE pod logs (stdout and stderr) are written to /var/log/containers in a JSON format by default.</p>
 <p>Example:</p>
-<pre><code>Log File Name Format: &lt;Pod&gt;_&lt;NameSpace&gt;_&lt;ContainerName&gt;-&lt;ContainerID&gt;.log
-Log File Content Format:  {&quot;log&quot;:&quot;&lt;message&gt;&quot;,&quot;stream&quot;:&quot;&lt;stdout|stderr&gt;&quot;,&quot;time&quot;:&quot;&lt;timestamp&gt;&quot;}
+<pre tabindex="0"><code>Log File Name Format: &lt;Pod&gt;_&lt;NameSpace&gt;_&lt;ContainerName&gt;-&lt;ContainerID&gt;.log
+Log File Content Format:  {&#34;log&#34;:&#34;&lt;message&gt;&#34;,&#34;stream&#34;:&#34;&lt;stdout|stderr&gt;&#34;,&#34;time&#34;:&#34;&lt;timestamp&gt;&#34;}
 </code></pre><div uk-alert class="uk-alert-warning uk-grid uk-grid-collapse uk-flex-nowrap "><span uk-icon="icon: warning; ratio: 1.2" class="uk-margin-small-right uk-flex-none"></span><div class="uk-width-expand">
 <p>Ensure that the worker nodes are running OL 7.6 and above.</p>
 </div></div>
@@ -903,44 +903,44 @@ Select Log Destination:
 <li>Verify the fluentd.conf</li>
 </ol>
 <p>ssh into worker node where the <code>mushop-orders</code> pod is running</p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">kubectl -n mushop get pods,nodes -o wide
-</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">ssh opc@&lt;IP_OF_WORKER_NODE&gt;
-</code></pre></div><pre><code>cat /etc/unified-monitoring-agent/conf.d/fluentd_config/fluentd.conf
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">kubectl -n mushop get pods,nodes -o wide
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ssh opc@&lt;IP_OF_WORKER_NODE&gt;
+</span></span></code></pre></div><pre tabindex="0"><code>cat /etc/unified-monitoring-agent/conf.d/fluentd_config/fluentd.conf
 </code></pre><blockquote>
 <blockquote>
 <p>Example output:</p>
 </blockquote>
 </blockquote>
-<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">worker-node-1$ cat /etc/unified-monitoring-agent/conf.d/fluentd_config/fluentd.conf
-    &lt;source&gt;
-        @type tail
-        tag 677561.varlogcontainers
-        path  /var/log/containers/*.log
-        pos_file  /etc/unifiedmonitoringagent/pos/677561-varlogcontainers.pos
-        path_key  tailed_path
-        &lt;parse&gt;
-            @type json
-            time_type  string
-            time_format  %Y-%m-%dT%H:%M:%S.%NZ
-        &lt;/parse&gt;
-    &lt;/source&gt;
-
-    &lt;match 677561.**&gt;
-        @type oci_logging
-        log_object_id  ocid1.log.oc1.phx.xxxx
-        &lt;buffer tag&gt;
-            @type file
-            retry_timeout  3h
-            path  /opt/unifiedmonitoringagent/run/buffer/677561
-            disable_chunk_backup  true
-            chunk_limit_size  5MB
-            flush_interval  180s
-            total_limit_size  1GB
-            overflow_action  throw_exception
-            retry_type  exponential_backoff
-        &lt;/buffer&gt;
-    &lt;/match&gt;
-</code></pre></div><p>If you dont see your defined agent config then wait for few more minutes for the agent config to get uploaded onto the worker nodes. Impatient users can restart the unified-monitoring-agent_config_downloader.timer service to download the config immediately.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">worker-node-1$ cat /etc/unified-monitoring-agent/conf.d/fluentd_config/fluentd.conf
+</span></span><span class="line"><span class="cl">    &lt;source&gt;
+</span></span><span class="line"><span class="cl">        @type tail
+</span></span><span class="line"><span class="cl">        tag 677561.varlogcontainers
+</span></span><span class="line"><span class="cl">        path  /var/log/containers/*.log
+</span></span><span class="line"><span class="cl">        pos_file  /etc/unifiedmonitoringagent/pos/677561-varlogcontainers.pos
+</span></span><span class="line"><span class="cl">        path_key  tailed_path
+</span></span><span class="line"><span class="cl">        &lt;parse&gt;
+</span></span><span class="line"><span class="cl">            @type json
+</span></span><span class="line"><span class="cl">            time_type  string
+</span></span><span class="line"><span class="cl">            time_format  %Y-%m-%dT%H:%M:%S.%NZ
+</span></span><span class="line"><span class="cl">        &lt;/parse&gt;
+</span></span><span class="line"><span class="cl">    &lt;/source&gt;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    &lt;match 677561.**&gt;
+</span></span><span class="line"><span class="cl">        @type oci_logging
+</span></span><span class="line"><span class="cl">        log_object_id  ocid1.log.oc1.phx.xxxx
+</span></span><span class="line"><span class="cl">        &lt;buffer tag&gt;
+</span></span><span class="line"><span class="cl">            @type file
+</span></span><span class="line"><span class="cl">            retry_timeout  3h
+</span></span><span class="line"><span class="cl">            path  /opt/unifiedmonitoringagent/run/buffer/677561
+</span></span><span class="line"><span class="cl">            disable_chunk_backup  true
+</span></span><span class="line"><span class="cl">            chunk_limit_size  5MB
+</span></span><span class="line"><span class="cl">            flush_interval  180s
+</span></span><span class="line"><span class="cl">            total_limit_size  1GB
+</span></span><span class="line"><span class="cl">            overflow_action  throw_exception
+</span></span><span class="line"><span class="cl">            retry_type  exponential_backoff
+</span></span><span class="line"><span class="cl">        &lt;/buffer&gt;
+</span></span><span class="line"><span class="cl">    &lt;/match&gt;
+</span></span></code></pre></div><p>If you dont see your defined agent config then wait for few more minutes for the agent config to get uploaded onto the worker nodes. Impatient users can restart the unified-monitoring-agent_config_downloader.timer service to download the config immediately.</p>
 <h3 id="oracle-cloud-infrastructure-oci-service-connector-hub">Oracle Cloud Infrastructure (OCI) Service Connector Hub</h3>
 <p>Service Connector Hub orchestrates data movement between services in Oracle Cloud Infrastructure.</p>
 <p>Data is moved using service connectors. A service connector specifies the source service that contains the data to be moved, tasks to run on the data, and the target service for delivery of data when tasks are complete.</p>
@@ -1391,6 +1391,6 @@ metric: &lt;CustomMetricName&gt;
   })(window, window.Site = window.Site || {});
 </script>
 
-<script src="../../../js/vendor.min.635fbc23a7f80d0fcee6728a32611ece1edb8302f818f627011b23dc8de8c6d4.js" ></script><script src="../../../js/extras.min.a9bf7ac5b6f2ffe1f85649105cb5f3065ab48c7ce45fa8efd51bce9622933221.js"  async></script><script src="../../../js/site.min.5a6d5008222f09cfe0ff51eb81d80c68d7d2fa56fa9ea1dd327f239f4c5d044d.js"  async></script>
+<script src="../../../js/vendor.min.22a7d4ab360294cf81c935c68f455e79a47ad466b0c0a8bbae43e18e077126d5.js" ></script><script src="../../../js/extras.min.c3eae648dd298c20417b7afd4d30cdff6b90d92b9efb5c3c4feda35e243e0520.js"  async></script><script src="../../../js/site.min.243b7d1622f73914ae7e7a6698f22c9d050d5a78d281d6eaf56d16a11e446093.js"  async></script>
   </body>
 </html>

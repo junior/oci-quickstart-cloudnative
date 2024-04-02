@@ -19,7 +19,7 @@
   <meta name="msapplication-TileColor" content="#c74634">
   <meta name="theme-color" content="#fcfbfa">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-  <link rel="stylesheet" type="text/css" href="../../sass/main.min.579b1ef900caab9f4034f2fab782c459ab9ddb6c2dd914fed6155812ffd82484.css" integrity="sha256-V5se&#43;QDKq59ANPL6t4LEWaud22wt2RT&#43;1hVYEv/YJIQ=">
+  <link rel="stylesheet" type="text/css" href="../../sass/main.min.dbe9c3072d7bdad30ac85b1cb73ead5c6a4aff7886c67d30be6a911035f04a4f.css" integrity="sha256-2&#43;nDBy172tMKyFsctz6tXGpK/3iGxn0wvmqREDXwSk8=">
   <link rel="stylesheet" type="text/css" href="../../fonts/fonts.min.58744946497c59fa8a6ac77636ea480457079e54512cf3dcb552592b56503cc1.css" integrity="sha256-WHRJRkl8WfqKasd2NupIBFcHnlRRLPPctVJZK1ZQPME=">
   <link rel="stylesheet" type="text/css" href="../../sass/mushop.min.c31ca585e7b3a90dfeb2fd0ac2d7d93ff0af82ea19b0cab20c8539d987761606.css" integrity="sha256-wxylheezqQ3&#43;sv0KwtfZP/CvguoZsMqyDIU52Yd2FgY=">
 </head>
@@ -773,20 +773,28 @@ application features.</p>
 <p>Dependencies installed with <code>setup</code> chart. <strong>NOTE</strong> as these are very common installations, each may be disabled as needed to resolve conflicts.</p>
 </blockquote>
 <p>From <code>deploy/complete/helm-chart</code> directory:</p>
+<!-- 1. Install chart dependencies:
+
+    ```shell
+    helm dependency update setup
+    ``` -->
 <ol>
 <li>
 <p>Install <code>setup</code> chart:</p>
-<pre><code class="language-shell--helm2" data-lang="shell--helm2">helm install setup \
+<pre tabindex="0"><code class="language-shell--helm2" data-lang="shell--helm2">helm install setup \
   --name mushop-utils \
   --namespace mushop-utilities
-</code></pre><pre><code class="language-shell--helm3" data-lang="shell--helm3">helm upgrade --install mushop-utils setup \
+</code></pre> <!-- ```shell--helm3
+ kubectl create ns mushop-utilities
+ ``` -->
+<pre tabindex="0"><code class="language-shell--helm3" data-lang="shell--helm3">helm upgrade --install mushop-utils setup \
   --dependency-update \
   --namespace mushop-utilities \
   --create-namespace
 </code></pre><blockquote>
 <p><strong>OPTIONAL</strong> In case you are provisioning ATP, Stream, and Object Storage with <strong>OCI Service Broker</strong>. In that case, you should enable the Service Catalog <code>catalog.enabled</code> to <code>true</code> in <code>values.yaml</code> or by adding the command line flag <code>--set catalog.enabled=true</code> in the <code>helm install</code> command above.</p>
 </blockquote>
-<pre><code class="language-shell--helm3" data-lang="shell--helm3">helm upgrade --install mushop-utils setup \
+<pre tabindex="0"><code class="language-shell--helm3" data-lang="shell--helm3">helm upgrade --install mushop-utils setup \
   --dependency-update \
   --namespace mushop-utilities \
   --create-namespace \
@@ -794,7 +802,7 @@ application features.</p>
 </code></pre><blockquote>
 <p><strong>OPTIONAL</strong> The Jenkins automation server can be enabled by setting <code>jenkins.enabled</code> to <code>true</code> in <code>values.yaml</code> or by adding the command line flag <code>--set jenkins.enabled=true</code> in the <code>helm install</code> command above.</p>
 </blockquote>
-<pre><code class="language-shell--helm3" data-lang="shell--helm3">helm upgrade --install mushop-utils setup \
+<pre tabindex="0"><code class="language-shell--helm3" data-lang="shell--helm3">helm upgrade --install mushop-utils setup \
   --dependency-update \
   --namespace mushop-utilities \
   --create-namespace \
@@ -802,9 +810,9 @@ application features.</p>
 </code></pre></li>
 <li>
 <p><strong>NOTE</strong> the public <code>EXTERNAL-IP</code> assigned to the ingress controller load balancer:</p>
-<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">kubectl get svc mushop-utils-ingress-nginx-controller <span class="se">\
-</span><span class="se"></span>  --namespace mushop-utilities
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">kubectl get svc mushop-utils-ingress-nginx-controller <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>  --namespace mushop-utilities
+</span></span></code></pre></div></li>
 </ol>
 
 
@@ -1240,6 +1248,6 @@ application features.</p>
   })(window, window.Site = window.Site || {});
 </script>
 
-<script src="../../js/vendor.min.635fbc23a7f80d0fcee6728a32611ece1edb8302f818f627011b23dc8de8c6d4.js" ></script><script src="../../js/extras.min.a9bf7ac5b6f2ffe1f85649105cb5f3065ab48c7ce45fa8efd51bce9622933221.js"  async></script><script src="../../js/site.min.5a6d5008222f09cfe0ff51eb81d80c68d7d2fa56fa9ea1dd327f239f4c5d044d.js"  async></script>
+<script src="../../js/vendor.min.22a7d4ab360294cf81c935c68f455e79a47ad466b0c0a8bbae43e18e077126d5.js" ></script><script src="../../js/extras.min.c3eae648dd298c20417b7afd4d30cdff6b90d92b9efb5c3c4feda35e243e0520.js"  async></script><script src="../../js/site.min.243b7d1622f73914ae7e7a6698f22c9d050d5a78d281d6eaf56d16a11e446093.js"  async></script>
   </body>
 </html>

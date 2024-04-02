@@ -6,30 +6,21 @@
     <description>Recent content in Getting Started on MuShop</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 05 Mar 2020 15:34:14 -0700</lastBuildDate><atom:link href="/quickstart/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 06 Mar 2020 12:28:12 -0700</lastBuildDate>
+    <atom:link href="/quickstart/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Always Free</title>
       <link>/quickstart/basic/</link>
       <pubDate>Fri, 06 Mar 2020 12:28:12 -0700</pubDate>
-      
       <guid>/quickstart/basic/</guid>
-      <description>Basic Deployment This deployment is designed to run on Oracle Cloud Infrastructure using only Always Free resources. It uses MuShop source code and the Oracle Cloud Infrastructure Terraform Provider to produce a Resource Manager stack, that provisions all required resources and configures the application on those resources.
-cd deploy/basic dir deploy/basic  Source directory for basic deployment build/configuration
- These steps outline the Basic deployment using Resource Manager:
- Download the latest mushop-basic-stack-latest.</description>
+      <description>Basic Deployment This deployment is designed to run on Oracle Cloud Infrastructure using only Always Free resources. It uses MuShop source code and the Oracle Cloud Infrastructure Terraform Provider to produce a Resource Manager stack, that provisions all required resources and configures the application on those resources.&#xA;cd deploy/basic dir deploy/basic Source directory for basic deployment build/configuration&#xA;These steps outline the Basic deployment using Resource Manager:&#xA;Download the latest mushop-basic-stack-latest.zip file.</description>
     </item>
-    
     <item>
       <title>Kubernetes Deployment</title>
       <link>/quickstart/kubernetes/</link>
       <pubDate>Fri, 06 Mar 2020 12:27:43 -0700</pubDate>
-      
       <guid>/quickstart/kubernetes/</guid>
-      <description>This deployment option utilizes helm for configuration and installation onto a Kubernetes cluster. It is recommended to use an Oracle Container Engine for Kubernetes cluster, however other standard Kubernetes clusters will also work.
-cd deploy/complete/helm-chart dir deploy/complete/helm-chart  Path for Cloud Native deployment configurations using helm
- Deploying the complete MuShop application with backing services from Oracle Cloud Infrastructure involves the use of the following helm charts:
- setup: Installs umbrella chart dependencies on the cluster (optional) provision: Provisions OCI resources integrated with Service Broker (optional) mushop: Deploys the MuShop application runtime  To get started, create a namespace for the application and its associative deployments:</description>
+      <description>This deployment option utilizes helm for configuration and installation onto a Kubernetes cluster. It is recommended to use an Oracle Container Engine for Kubernetes cluster, however other standard Kubernetes clusters will also work.&#xA;cd deploy/complete/helm-chart dir deploy/complete/helm-chart Path for Cloud Native deployment configurations using helm&#xA;Deploying the complete MuShop application with backing services from Oracle Cloud Infrastructure involves the use of the following helm charts:&#xA;setup: Installs umbrella chart dependencies on the cluster (optional) provision: Provisions OCI resources integrated with Service Broker (optional) mushop: Deploys the MuShop application runtime To get started, create a namespace for the application and its associative deployments:</description>
     </item>
-    
   </channel>
 </rss>

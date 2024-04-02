@@ -19,7 +19,7 @@
   <meta name="msapplication-TileColor" content="#c74634">
   <meta name="theme-color" content="#fcfbfa">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-  <link rel="stylesheet" type="text/css" href="../../sass/main.min.579b1ef900caab9f4034f2fab782c459ab9ddb6c2dd914fed6155812ffd82484.css" integrity="sha256-V5se&#43;QDKq59ANPL6t4LEWaud22wt2RT&#43;1hVYEv/YJIQ=">
+  <link rel="stylesheet" type="text/css" href="../../sass/main.min.dbe9c3072d7bdad30ac85b1cb73ead5c6a4aff7886c67d30be6a911035f04a4f.css" integrity="sha256-2&#43;nDBy172tMKyFsctz6tXGpK/3iGxn0wvmqREDXwSk8=">
   <link rel="stylesheet" type="text/css" href="../../fonts/fonts.min.58744946497c59fa8a6ac77636ea480457079e54512cf3dcb552592b56503cc1.css" integrity="sha256-WHRJRkl8WfqKasd2NupIBFcHnlRRLPPctVJZK1ZQPME=">
   <link rel="stylesheet" type="text/css" href="../../sass/mushop.min.c31ca585e7b3a90dfeb2fd0ac2d7d93ff0af82ea19b0cab20c8539d987761606.css" integrity="sha256-wxylheezqQ3&#43;sv0KwtfZP/CvguoZsMqyDIU52Yd2FgY=">
 </head>
@@ -749,30 +749,30 @@ export FAILOVER_REGION=us-ashburn-1
 <ul>
 <li>Create the Source ADB (Autonomous Database)</li>
 </ul>
-<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">    oci db autonomous-database create --compartment-id <span class="si">${</span><span class="nv">COMPARTMENT_ID</span><span class="si">}</span> <span class="se">\
-</span><span class="se"></span>    --db-name <span class="si">${</span><span class="nv">DB_NAME</span><span class="si">}</span> --admin-password <span class="si">${</span><span class="nv">DB_PASSWORD</span><span class="si">}</span> --db-version 19c <span class="se">\
-</span><span class="se"></span>    --cpu-core-count <span class="m">1</span> --data-storage-size-in-tbs <span class="m">1</span> <span class="se">\
-</span><span class="se"></span>    --display-name <span class="si">${</span><span class="nv">DB_DISPLAY_NAME</span><span class="si">}</span> --region <span class="si">${</span><span class="nv">PRIMARY_REGION</span><span class="si">}</span>
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">    oci db autonomous-database create --compartment-id <span class="si">${</span><span class="nv">COMPARTMENT_ID</span><span class="si">}</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>    --db-name <span class="si">${</span><span class="nv">DB_NAME</span><span class="si">}</span> --admin-password <span class="si">${</span><span class="nv">DB_PASSWORD</span><span class="si">}</span> --db-version 19c <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>    --cpu-core-count <span class="m">1</span> --data-storage-size-in-tbs <span class="m">1</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>    --display-name <span class="si">${</span><span class="nv">DB_DISPLAY_NAME</span><span class="si">}</span> --region <span class="si">${</span><span class="nv">PRIMARY_REGION</span><span class="si">}</span>
+</span></span></code></pre></div><ul>
 <li>Fetch the Source ADB (Autonomous Database) OCID</li>
 </ul>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">    <span class="nv">DB_ID</span><span class="o">=</span><span class="k">$(</span>oci db autonomous-database list -c <span class="si">${</span><span class="nv">COMPARTMENT_ID</span><span class="si">}</span> <span class="se">\
-</span><span class="se"></span>    --region <span class="si">${</span><span class="nv">PRIMARY_REGION</span><span class="si">}</span> --display-name <span class="nv">$DB_NAME</span> <span class="se">\
-</span><span class="se"></span>    --query <span class="s2">&#34;data[?\&#34;db-name\&#34;==&#39;</span><span class="si">${</span><span class="nv">DB_NAME</span><span class="si">}</span><span class="s2">&#39;].id | [0]&#34;</span> --raw-output<span class="k">)</span>
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">    <span class="nv">DB_ID</span><span class="o">=</span><span class="k">$(</span>oci db autonomous-database list -c <span class="si">${</span><span class="nv">COMPARTMENT_ID</span><span class="si">}</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>    --region <span class="si">${</span><span class="nv">PRIMARY_REGION</span><span class="si">}</span> --display-name <span class="nv">$DB_NAME</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>    --query <span class="s2">&#34;data[?\&#34;db-name\&#34;==&#39;</span><span class="si">${</span><span class="nv">DB_NAME</span><span class="si">}</span><span class="s2">&#39;].id | [0]&#34;</span> --raw-output<span class="k">)</span>
+</span></span></code></pre></div><ul>
 <li>Create the DR ADB (Autonomous Database)</li>
 </ul>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">    oci db autonomous-database create-adb-cross-region-data-guard-details <span class="se">\
-</span><span class="se"></span>    --compartment-id <span class="si">${</span><span class="nv">COMPARTMENT_ID</span><span class="si">}</span> --db-name <span class="si">${</span><span class="nv">DB_NAME</span><span class="si">}</span> --source-id <span class="si">${</span><span class="nv">DB_ID</span><span class="si">}</span> <span class="se">\
-</span><span class="se"></span>    --cpu-core-count <span class="m">1</span> --data-storage-size-in-tbs <span class="m">1</span> <span class="se">\
-</span><span class="se"></span>    --region <span class="si">${</span><span class="nv">FAILOVER_REGION</span><span class="si">}</span> --db-version 19c
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">    oci db autonomous-database create-adb-cross-region-data-guard-details <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>    --compartment-id <span class="si">${</span><span class="nv">COMPARTMENT_ID</span><span class="si">}</span> --db-name <span class="si">${</span><span class="nv">DB_NAME</span><span class="si">}</span> --source-id <span class="si">${</span><span class="nv">DB_ID</span><span class="si">}</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>    --cpu-core-count <span class="m">1</span> --data-storage-size-in-tbs <span class="m">1</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>    --region <span class="si">${</span><span class="nv">FAILOVER_REGION</span><span class="si">}</span> --db-version 19c
+</span></span></code></pre></div><ul>
 <li>Download and extract autonomous database wallet from source ADB</li>
 </ul>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">    oci db autonomous-database generate-wallet --autonomous-database-id <span class="si">${</span><span class="nv">DB_ID</span><span class="si">}</span><span class="se">\
-</span><span class="se"></span>    --password <span class="si">${</span><span class="nv">WALLET_PW</span><span class="si">}</span> --file <span class="si">${</span><span class="nv">WALLET_ZIP</span><span class="si">}</span> --region <span class="nv">$PRIMARY_REGION</span>
-</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">    unzip <span class="si">${</span><span class="nv">WALLET_ZIP</span><span class="si">}</span> -d /tmp/wallet_source
-</code></pre></div><div uk-alert class="uk-alert-information uk-grid uk-grid-collapse uk-flex-nowrap "><span uk-icon="icon: information; ratio: 1.2" class="uk-margin-small-right uk-flex-none"></span><div class="uk-width-expand">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">    oci db autonomous-database generate-wallet --autonomous-database-id <span class="si">${</span><span class="nv">DB_ID</span><span class="si">}</span><span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>    --password <span class="si">${</span><span class="nv">WALLET_PW</span><span class="si">}</span> --file <span class="si">${</span><span class="nv">WALLET_ZIP</span><span class="si">}</span> --region <span class="nv">$PRIMARY_REGION</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">    unzip <span class="si">${</span><span class="nv">WALLET_ZIP</span><span class="si">}</span> -d /tmp/wallet_source
+</span></span></code></pre></div><div uk-alert class="uk-alert-information uk-grid uk-grid-collapse uk-flex-nowrap "><span uk-icon="icon: information; ratio: 1.2" class="uk-margin-small-right uk-flex-none"></span><div class="uk-width-expand">
 <p>Keep this wallet handy as we will need to add it as OKE secret later on.</p>
 <p>The database wallet on standby(DR) will not be available for download until the failover.
 The wallet has to be separately downloaded for primary and remote region&rsquo;s as tnsnames.ora DNS entries are different.</p>
@@ -783,85 +783,85 @@ The wallet has to be separately downloaded for primary and remote region&rsquo;s
 <ul>
 <li>
 <p>Go to the chart folder</p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">cd</span> oci-cloudnative/deploy/complete/helm-chart
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">cd</span> oci-cloudnative/deploy/complete/helm-chart
+</span></span></code></pre></div></li>
 <li>
 <p>Install Setup Charts</p>
-<pre><code class="language-shell--helm3" data-lang="shell--helm3">helm upgrade --install mushop-utils setup --dependency-update --namespace mushop-utilities --create-namespace
+<pre tabindex="0"><code class="language-shell--helm3" data-lang="shell--helm3">helm upgrade --install mushop-utils setup --dependency-update --namespace mushop-utilities --create-namespace
 </code></pre></li>
 <li>
 <p>Add the following secrets</p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">kubectl create secret generic oci-credentials <span class="se">\
-</span><span class="se"></span>    --namespace mushop <span class="se">\
-</span><span class="se"></span>    --from-literal<span class="o">=</span><span class="nv">tenancy</span><span class="o">=</span>&lt;TENANCY_OCID&gt; <span class="se">\
-</span><span class="se"></span>    --from-literal<span class="o">=</span><span class="nv">user</span><span class="o">=</span>&lt;USER_OCID&gt; <span class="se">\
-</span><span class="se"></span>    --from-literal<span class="o">=</span><span class="nv">region</span><span class="o">=</span>&lt;USER_OCI_REGION&gt; <span class="se">\
-</span><span class="se"></span>    --from-literal<span class="o">=</span><span class="nv">fingerprint</span><span class="o">=</span>&lt;USER_PUBLIC_API_KEY_FINGERPRINT&gt; <span class="se">\
-</span><span class="se"></span>    --from-literal<span class="o">=</span><span class="nv">passphrase</span><span class="o">=</span>&lt;PASSPHRASE_STRING&gt; <span class="se">\
-</span><span class="se"></span>    --from-file<span class="o">=</span><span class="nv">privatekey</span><span class="o">=</span>&lt;PATH_OF_USER_PRIVATE_API_KEY&gt;
-</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">kubectl create secret generic oadb-admin <span class="se">\
-</span><span class="se"></span>    --namespace mushop <span class="se">\
-</span><span class="se"></span>    --from-literal<span class="o">=</span><span class="nv">oadb_admin_pw</span><span class="o">=</span><span class="si">${</span><span class="nv">DB_PASSWORD</span><span class="si">}</span>
-</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">kubectl create secret generic oadb-wallet <span class="se">\
-</span><span class="se"></span>    --namespace mushop --from-file<span class="o">=</span>/tmp/wallet_source
-</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">kubectl create secret generic oadb-connection <span class="se">\
-</span><span class="se"></span>    --namespace mushop <span class="se">\
-</span><span class="se"></span>    --from-literal<span class="o">=</span><span class="nv">oadb_wallet_pw</span><span class="o">=</span><span class="si">${</span><span class="nv">WALLET_PW</span><span class="si">}</span> <span class="se">\
-</span><span class="se"></span>    --from-literal<span class="o">=</span><span class="nv">oadb_service</span><span class="o">=</span><span class="si">${</span><span class="nv">DB_SERVICE_NAME</span><span class="si">}</span>
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">kubectl create secret generic oci-credentials <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>    --namespace mushop <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>    --from-literal<span class="o">=</span><span class="nv">tenancy</span><span class="o">=</span>&lt;TENANCY_OCID&gt; <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>    --from-literal<span class="o">=</span><span class="nv">user</span><span class="o">=</span>&lt;USER_OCID&gt; <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>    --from-literal<span class="o">=</span><span class="nv">region</span><span class="o">=</span>&lt;USER_OCI_REGION&gt; <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>    --from-literal<span class="o">=</span><span class="nv">fingerprint</span><span class="o">=</span>&lt;USER_PUBLIC_API_KEY_FINGERPRINT&gt; <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>    --from-literal<span class="o">=</span><span class="nv">passphrase</span><span class="o">=</span>&lt;PASSPHRASE_STRING&gt; <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>    --from-file<span class="o">=</span><span class="nv">privatekey</span><span class="o">=</span>&lt;PATH_OF_USER_PRIVATE_API_KEY&gt;
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">kubectl create secret generic oadb-admin <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>    --namespace mushop <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>    --from-literal<span class="o">=</span><span class="nv">oadb_admin_pw</span><span class="o">=</span><span class="si">${</span><span class="nv">DB_PASSWORD</span><span class="si">}</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">kubectl create secret generic oadb-wallet <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>    --namespace mushop --from-file<span class="o">=</span>/tmp/wallet_source
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">kubectl create secret generic oadb-connection <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>    --namespace mushop <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>    --from-literal<span class="o">=</span><span class="nv">oadb_wallet_pw</span><span class="o">=</span><span class="si">${</span><span class="nv">WALLET_PW</span><span class="si">}</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>    --from-literal<span class="o">=</span><span class="nv">oadb_service</span><span class="o">=</span><span class="si">${</span><span class="nv">DB_SERVICE_NAME</span><span class="si">}</span>
+</span></span></code></pre></div></li>
 <li>
 <p>Edit/Add the following secrets to values-prod.yaml as shown below</p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">cat mushop/values-prod.yaml
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">cat mushop/values-prod.yaml
+</span></span></code></pre></div></li>
 </ul>
 <p>Sample Output:</p>
-<div class="highlight"><pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">global</span><span class="p">:</span><span class="w">
-</span><span class="w"></span><span class="nt">ociAuthSecret</span><span class="p">:</span><span class="w"> </span><span class="l">oci-credentials       </span><span class="w"> </span><span class="c"># OCI authentication credentials secret name</span><span class="w">
-</span><span class="w"></span><span class="nt">ossStreamSecret</span><span class="p">:</span><span class="w">                      </span><span class="c"># Name of Stream Connection secret</span><span class="w">
-</span><span class="w"></span><span class="nt">oadbAdminSecret</span><span class="p">:</span><span class="w"> </span><span class="l">oadb-admin          </span><span class="w"> </span><span class="c"># Name of DB Admin secret created earlier</span><span class="w">
-</span><span class="w"></span><span class="nt">oadbWalletSecret</span><span class="p">:</span><span class="w"> </span><span class="l">oadb-wallet        </span><span class="w"> </span><span class="c"># Name of wallet secret created earlier</span><span class="w">
-</span><span class="w"></span><span class="nt">oadbConnectionSecret</span><span class="p">:</span><span class="w"> </span><span class="l">oadb-connection</span><span class="w"> </span><span class="c"># Name of connection secret created earlier</span><span class="w">
-</span></code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">global</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">ociAuthSecret</span><span class="p">:</span><span class="w"> </span><span class="l">oci-credentials       </span><span class="w"> </span><span class="c"># OCI authentication credentials secret name</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">ossStreamSecret</span><span class="p">:</span><span class="w">                      </span><span class="c"># Name of Stream Connection secret</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">oadbAdminSecret</span><span class="p">:</span><span class="w"> </span><span class="l">oadb-admin          </span><span class="w"> </span><span class="c"># Name of DB Admin secret created earlier</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">oadbWalletSecret</span><span class="p">:</span><span class="w"> </span><span class="l">oadb-wallet        </span><span class="w"> </span><span class="c"># Name of wallet secret created earlier</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">oadbConnectionSecret</span><span class="p">:</span><span class="w"> </span><span class="l">oadb-connection</span><span class="w"> </span><span class="c"># Name of connection secret created earlier</span><span class="w">
+</span></span></span></code></pre></div><ul>
 <li>
 <p>Install MuShop</p>
-<pre><code class="language-shell--helm3" data-lang="shell--helm3">helm upgrade --install -f ./mushop/values-prod.yaml \
+<pre tabindex="0"><code class="language-shell--helm3" data-lang="shell--helm3">helm upgrade --install -f ./mushop/values-prod.yaml \
 mymushop mushop -n mushop \
 --create-namespace
 </code></pre></li>
 <li>
 <p>Setup the ingress
 A TLS secret is used for SSL termination on the ingress controller. To generate the secret for this example, a self-signed certificate is used. While this is okay for testing, for production, use a certificate signed by a Certificate Authority.</p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">openssl req -x509 -nodes -days <span class="m">365</span> <span class="se">\
-</span><span class="se"></span>-newkey rsa:2048 -keyout tls.key <span class="se">\
-</span><span class="se"></span>-out tls.crt -subj <span class="s2">&#34;/CN=nginxsvc/O=nginxsvc&#34;</span>
-</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">kubectl create secret tls tls-secret --key tls.key --cert tls.crt -n mushop
-</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">cat <span class="s">&lt;&lt; EOF | kubectl -n mushop apply -f -
-</span><span class="s">apiVersion: networking.k8s.io/v1
-</span><span class="s">kind: Ingress
-</span><span class="s">metadata:
-</span><span class="s">name: mushop
-</span><span class="s">annotations:
-</span><span class="s">    kubernetes.io/ingress.class: &#34;nginx&#34;
-</span><span class="s">spec:
-</span><span class="s">tls:
-</span><span class="s">- secretName: tls-secret
-</span><span class="s">rules:
-</span><span class="s">- http:
-</span><span class="s">    paths:
-</span><span class="s">    - path: /
-</span><span class="s">        pathType: Prefix
-</span><span class="s">        backend:
-</span><span class="s">        service:
-</span><span class="s">            name: edge
-</span><span class="s">            port:
-</span><span class="s">            number: 80
-</span><span class="s">EOF</span>
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">openssl req -x509 -nodes -days <span class="m">365</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>-newkey rsa:2048 -keyout tls.key <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>-out tls.crt -subj <span class="s2">&#34;/CN=nginxsvc/O=nginxsvc&#34;</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">kubectl create secret tls tls-secret --key tls.key --cert tls.crt -n mushop
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">cat <span class="s">&lt;&lt; EOF | kubectl -n mushop apply -f -
+</span></span></span><span class="line"><span class="cl"><span class="s">apiVersion: networking.k8s.io/v1
+</span></span></span><span class="line"><span class="cl"><span class="s">kind: Ingress
+</span></span></span><span class="line"><span class="cl"><span class="s">metadata:
+</span></span></span><span class="line"><span class="cl"><span class="s">name: mushop
+</span></span></span><span class="line"><span class="cl"><span class="s">annotations:
+</span></span></span><span class="line"><span class="cl"><span class="s">    kubernetes.io/ingress.class: &#34;nginx&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s">spec:
+</span></span></span><span class="line"><span class="cl"><span class="s">tls:
+</span></span></span><span class="line"><span class="cl"><span class="s">- secretName: tls-secret
+</span></span></span><span class="line"><span class="cl"><span class="s">rules:
+</span></span></span><span class="line"><span class="cl"><span class="s">- http:
+</span></span></span><span class="line"><span class="cl"><span class="s">    paths:
+</span></span></span><span class="line"><span class="cl"><span class="s">    - path: /
+</span></span></span><span class="line"><span class="cl"><span class="s">        pathType: Prefix
+</span></span></span><span class="line"><span class="cl"><span class="s">        backend:
+</span></span></span><span class="line"><span class="cl"><span class="s">        service:
+</span></span></span><span class="line"><span class="cl"><span class="s">            name: edge
+</span></span></span><span class="line"><span class="cl"><span class="s">            port:
+</span></span></span><span class="line"><span class="cl"><span class="s">            number: 80
+</span></span></span><span class="line"><span class="cl"><span class="s">EOF</span>
+</span></span></code></pre></div></li>
 <li>
 <p>Access the Source MuShop application using the ingress IP</p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">kubectl get svc mushop-utils-ingress-nginx-controller <span class="se">\
-</span><span class="se"></span>--namespace mushop-utilities
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">kubectl get svc mushop-utils-ingress-nginx-controller <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>--namespace mushop-utilities
+</span></span></code></pre></div></li>
 <li>
 <p>Verify the application at Source</p>
 <p>Access <code>https://&lt;primary-site-ingress-ip-address&gt;</code> and ensure that you would
@@ -870,8 +870,8 @@ see the all the MuShop catalogue products listed without errors.</p>
 </ul>
 <h3 id="perform-autonomous-transaction-processing-atp-failover">Perform Autonomous Transaction Processing (ATP) Failover</h3>
 <p>Go to OCI console and perform a failover.</p>
-<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">OCI-Console -&gt; Oracle Database -&gt; Autonomous Transaction Processing (Standby db: `us-ashburn-1`) -&gt; Switchover
-</code></pre></div><div uk-alert class="uk-alert-information uk-grid uk-grid-collapse uk-flex-nowrap "><span uk-icon="icon: information; ratio: 1.2" class="uk-margin-small-right uk-flex-none"></span><div class="uk-width-expand">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">OCI-Console -&gt; Oracle Database -&gt; Autonomous Transaction Processing (Standby db: `us-ashburn-1`) -&gt; Switchover
+</span></span></code></pre></div><div uk-alert class="uk-alert-information uk-grid uk-grid-collapse uk-flex-nowrap "><span uk-icon="icon: information; ratio: 1.2" class="uk-margin-small-right uk-flex-none"></span><div class="uk-width-expand">
 <p>Wait until the switchover completes fully and there are no &lsquo;role change in progress&rsquo;
 status on either side (Primary and Standby).</p>
 </div></div>
@@ -881,79 +881,79 @@ section and create a OKE cluster at the DR region.</p>
 <ul>
 <li>
 <p>Download and extract the DR ADB wallet</p>
-<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">OCI-Console -&gt; Oracle Database -&gt; Autonomous Transaction Processing (Standby db: `us-ashburn-1`) -&gt; DB Connection -&gt; Download wallet
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">OCI-Console -&gt; Oracle Database -&gt; Autonomous Transaction Processing (Standby db: `us-ashburn-1`) -&gt; DB Connection -&gt; Download wallet
+</span></span></code></pre></div></li>
 </ul>
 <p>Extract the wallet</p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">unzip &lt;wallet_zip_file&gt; -d /tmp/wallet_remote
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">unzip &lt;wallet_zip_file&gt; -d /tmp/wallet_remote
+</span></span></code></pre></div><ul>
 <li>
 <p>Create the secrets, set the region as <code>us-ashburn-1</code> in this case</p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">kubectl create secret generic oci-credentials <span class="se">\
-</span><span class="se"></span>    --namespace mushop <span class="se">\
-</span><span class="se"></span>    --from-literal<span class="o">=</span><span class="nv">tenancy</span><span class="o">=</span>&lt;TENANCY_OCID&gt; <span class="se">\
-</span><span class="se"></span>    --from-literal<span class="o">=</span><span class="nv">user</span><span class="o">=</span>&lt;USER_OCID&gt; <span class="se">\
-</span><span class="se"></span>    --from-literal<span class="o">=</span><span class="nv">region</span><span class="o">=</span>&lt;USER_OCI_REGION&gt; <span class="se">\
-</span><span class="se"></span>    --from-literal<span class="o">=</span><span class="nv">fingerprint</span><span class="o">=</span>&lt;USER_PUBLIC_API_KEY_FINGERPRINT&gt; <span class="se">\
-</span><span class="se"></span>    --from-literal<span class="o">=</span><span class="nv">passphrase</span><span class="o">=</span>&lt;PASSPHRASE_STRING&gt; <span class="se">\
-</span><span class="se"></span>    --from-file<span class="o">=</span><span class="nv">privatekey</span><span class="o">=</span>&lt;PATH_OF_USER_PRIVATE_API_KEY&gt;
-</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">kubectl create secret generic oadb-wallet <span class="se">\
-</span><span class="se"></span>    --namespace mushop   --from-file<span class="o">=</span>/tmp/wallet_remote
-</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">kubectl create secret generic oadb-admin <span class="se">\
-</span><span class="se"></span>    --namespace mushop <span class="se">\
-</span><span class="se"></span>    --from-literal<span class="o">=</span><span class="nv">oadb_admin_pw</span><span class="o">=</span><span class="si">${</span><span class="nv">DB_PASSWORD</span><span class="si">}</span>
-</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">kubectl create secret generic oadb-connection <span class="se">\
-</span><span class="se"></span>    --namespace mushop <span class="se">\
-</span><span class="se"></span>    --from-literal<span class="o">=</span><span class="nv">oadb_wallet_pw</span><span class="o">=</span><span class="si">${</span><span class="nv">WALLET_PW</span><span class="si">}</span> <span class="se">\
-</span><span class="se"></span>    --from-literal<span class="o">=</span><span class="nv">oadb_service</span><span class="o">=</span><span class="si">${</span><span class="nv">DB_SERVICE_NAME</span><span class="si">}</span>
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">kubectl create secret generic oci-credentials <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>    --namespace mushop <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>    --from-literal<span class="o">=</span><span class="nv">tenancy</span><span class="o">=</span>&lt;TENANCY_OCID&gt; <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>    --from-literal<span class="o">=</span><span class="nv">user</span><span class="o">=</span>&lt;USER_OCID&gt; <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>    --from-literal<span class="o">=</span><span class="nv">region</span><span class="o">=</span>&lt;USER_OCI_REGION&gt; <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>    --from-literal<span class="o">=</span><span class="nv">fingerprint</span><span class="o">=</span>&lt;USER_PUBLIC_API_KEY_FINGERPRINT&gt; <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>    --from-literal<span class="o">=</span><span class="nv">passphrase</span><span class="o">=</span>&lt;PASSPHRASE_STRING&gt; <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>    --from-file<span class="o">=</span><span class="nv">privatekey</span><span class="o">=</span>&lt;PATH_OF_USER_PRIVATE_API_KEY&gt;
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">kubectl create secret generic oadb-wallet <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>    --namespace mushop   --from-file<span class="o">=</span>/tmp/wallet_remote
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">kubectl create secret generic oadb-admin <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>    --namespace mushop <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>    --from-literal<span class="o">=</span><span class="nv">oadb_admin_pw</span><span class="o">=</span><span class="si">${</span><span class="nv">DB_PASSWORD</span><span class="si">}</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">kubectl create secret generic oadb-connection <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>    --namespace mushop <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>    --from-literal<span class="o">=</span><span class="nv">oadb_wallet_pw</span><span class="o">=</span><span class="si">${</span><span class="nv">WALLET_PW</span><span class="si">}</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>    --from-literal<span class="o">=</span><span class="nv">oadb_service</span><span class="o">=</span><span class="si">${</span><span class="nv">DB_SERVICE_NAME</span><span class="si">}</span>
+</span></span></code></pre></div></li>
 <li>
 <p>Edit/Add the following secrets to values-prod.yaml as shown below</p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">cat mushop/values-prod.yaml
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">cat mushop/values-prod.yaml
+</span></span></code></pre></div></li>
 </ul>
 <p>Sample Output:</p>
-<div class="highlight"><pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">global</span><span class="p">:</span><span class="w">
-</span><span class="w"></span><span class="nt">ociAuthSecret</span><span class="p">:</span><span class="w"> </span><span class="l">oci-credentials       </span><span class="w"> </span><span class="c"># OCI authentication credentials secret name</span><span class="w">
-</span><span class="w"></span><span class="nt">ossStreamSecret</span><span class="p">:</span><span class="w">                      </span><span class="c"># Name of Stream Connection secret</span><span class="w">
-</span><span class="w"></span><span class="nt">oadbAdminSecret</span><span class="p">:</span><span class="w"> </span><span class="l">oadb-admin          </span><span class="w"> </span><span class="c"># Name of DB Admin secret created earlier</span><span class="w">
-</span><span class="w"></span><span class="nt">oadbWalletSecret</span><span class="p">:</span><span class="w"> </span><span class="l">oadb-wallet        </span><span class="w"> </span><span class="c"># Name of wallet secret created earlier</span><span class="w">
-</span><span class="w"></span><span class="nt">oadbConnectionSecret</span><span class="p">:</span><span class="w"> </span><span class="l">oadb-connection</span><span class="w"> </span><span class="c"># Name of connection secret created earlier</span><span class="w">
-</span></code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">global</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">ociAuthSecret</span><span class="p">:</span><span class="w"> </span><span class="l">oci-credentials       </span><span class="w"> </span><span class="c"># OCI authentication credentials secret name</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">ossStreamSecret</span><span class="p">:</span><span class="w">                      </span><span class="c"># Name of Stream Connection secret</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">oadbAdminSecret</span><span class="p">:</span><span class="w"> </span><span class="l">oadb-admin          </span><span class="w"> </span><span class="c"># Name of DB Admin secret created earlier</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">oadbWalletSecret</span><span class="p">:</span><span class="w"> </span><span class="l">oadb-wallet        </span><span class="w"> </span><span class="c"># Name of wallet secret created earlier</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">oadbConnectionSecret</span><span class="p">:</span><span class="w"> </span><span class="l">oadb-connection</span><span class="w"> </span><span class="c"># Name of connection secret created earlier</span><span class="w">
+</span></span></span></code></pre></div><ul>
 <li>
 <p>Install MuShop</p>
-<pre><code class="language-shell--helm3" data-lang="shell--helm3">helm upgrade --install -f ./mushop/values-prod.yaml \
+<pre tabindex="0"><code class="language-shell--helm3" data-lang="shell--helm3">helm upgrade --install -f ./mushop/values-prod.yaml \
 mymushop mushop -n mushop
 </code></pre></li>
 <li>
 <p>Set up the ingress (On DR <code>us-ashburn-1</code>)</p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">openssl req -x509 -nodes -days <span class="m">365</span> <span class="se">\
-</span><span class="se"></span>-newkey rsa:2048 -keyout tls.key <span class="se">\
-</span><span class="se"></span>-out tls.crt -subj <span class="s2">&#34;/CN=nginxsvc/O=nginxsvc&#34;</span>
-</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">kubectl create secret tls <span class="se">\
-</span><span class="se"></span>tls-secret --key tls.key --cert tls.crt -n mushop
-</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">cat <span class="s">&lt;&lt; EOF | kubectl -n mushop apply -f -
-</span><span class="s">apiVersion: networking.k8s.io/v1
-</span><span class="s">kind: Ingress
-</span><span class="s">metadata:
-</span><span class="s">name: mushop
-</span><span class="s">annotations:
-</span><span class="s">    kubernetes.io/ingress.class: &#34;nginx&#34;
-</span><span class="s">spec:
-</span><span class="s">tls:
-</span><span class="s">- secretName: tls-secret
-</span><span class="s">rules:
-</span><span class="s">- http:
-</span><span class="s">    paths:
-</span><span class="s">    - path: /
-</span><span class="s">        pathType: Prefix
-</span><span class="s">        backend:
-</span><span class="s">        service:
-</span><span class="s">            name: edge
-</span><span class="s">            port:
-</span><span class="s">            number: 80
-</span><span class="s">EOF</span>
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">openssl req -x509 -nodes -days <span class="m">365</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>-newkey rsa:2048 -keyout tls.key <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>-out tls.crt -subj <span class="s2">&#34;/CN=nginxsvc/O=nginxsvc&#34;</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">kubectl create secret tls <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>tls-secret --key tls.key --cert tls.crt -n mushop
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">cat <span class="s">&lt;&lt; EOF | kubectl -n mushop apply -f -
+</span></span></span><span class="line"><span class="cl"><span class="s">apiVersion: networking.k8s.io/v1
+</span></span></span><span class="line"><span class="cl"><span class="s">kind: Ingress
+</span></span></span><span class="line"><span class="cl"><span class="s">metadata:
+</span></span></span><span class="line"><span class="cl"><span class="s">name: mushop
+</span></span></span><span class="line"><span class="cl"><span class="s">annotations:
+</span></span></span><span class="line"><span class="cl"><span class="s">    kubernetes.io/ingress.class: &#34;nginx&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s">spec:
+</span></span></span><span class="line"><span class="cl"><span class="s">tls:
+</span></span></span><span class="line"><span class="cl"><span class="s">- secretName: tls-secret
+</span></span></span><span class="line"><span class="cl"><span class="s">rules:
+</span></span></span><span class="line"><span class="cl"><span class="s">- http:
+</span></span></span><span class="line"><span class="cl"><span class="s">    paths:
+</span></span></span><span class="line"><span class="cl"><span class="s">    - path: /
+</span></span></span><span class="line"><span class="cl"><span class="s">        pathType: Prefix
+</span></span></span><span class="line"><span class="cl"><span class="s">        backend:
+</span></span></span><span class="line"><span class="cl"><span class="s">        service:
+</span></span></span><span class="line"><span class="cl"><span class="s">            name: edge
+</span></span></span><span class="line"><span class="cl"><span class="s">            port:
+</span></span></span><span class="line"><span class="cl"><span class="s">            number: 80
+</span></span></span><span class="line"><span class="cl"><span class="s">EOF</span>
+</span></span></code></pre></div></li>
 </ul>
 <h3 id="verify-the-application-at-dr">Verify the application at DR</h3>
 <pre><code>kubectl get svc mushop-utils-ingress-nginx-controller -n mushop-utilities
@@ -1403,6 +1403,6 @@ Ingress IP. The procedure to setup WAF and DNS are not included as part of this 
   })(window, window.Site = window.Site || {});
 </script>
 
-<script src="../../js/vendor.min.635fbc23a7f80d0fcee6728a32611ece1edb8302f818f627011b23dc8de8c6d4.js" ></script><script src="../../js/extras.min.a9bf7ac5b6f2ffe1f85649105cb5f3065ab48c7ce45fa8efd51bce9622933221.js"  async></script><script src="../../js/site.min.5a6d5008222f09cfe0ff51eb81d80c68d7d2fa56fa9ea1dd327f239f4c5d044d.js"  async></script>
+<script src="../../js/vendor.min.22a7d4ab360294cf81c935c68f455e79a47ad466b0c0a8bbae43e18e077126d5.js" ></script><script src="../../js/extras.min.c3eae648dd298c20417b7afd4d30cdff6b90d92b9efb5c3c4feda35e243e0520.js"  async></script><script src="../../js/site.min.243b7d1622f73914ae7e7a6698f22c9d050d5a78d281d6eaf56d16a11e446093.js"  async></script>
   </body>
 </html>

@@ -19,7 +19,7 @@
   <meta name="msapplication-TileColor" content="#c74634">
   <meta name="theme-color" content="#fcfbfa">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-  <link rel="stylesheet" type="text/css" href="../sass/main.min.579b1ef900caab9f4034f2fab782c459ab9ddb6c2dd914fed6155812ffd82484.css" integrity="sha256-V5se&#43;QDKq59ANPL6t4LEWaud22wt2RT&#43;1hVYEv/YJIQ=">
+  <link rel="stylesheet" type="text/css" href="../sass/main.min.dbe9c3072d7bdad30ac85b1cb73ead5c6a4aff7886c67d30be6a911035f04a4f.css" integrity="sha256-2&#43;nDBy172tMKyFsctz6tXGpK/3iGxn0wvmqREDXwSk8=">
   <link rel="stylesheet" type="text/css" href="../fonts/fonts.min.58744946497c59fa8a6ac77636ea480457079e54512cf3dcb552592b56503cc1.css" integrity="sha256-WHRJRkl8WfqKasd2NupIBFcHnlRRLPPctVJZK1ZQPME=">
   <link rel="stylesheet" type="text/css" href="../sass/mushop.min.c31ca585e7b3a90dfeb2fd0ac2d7d93ff0af82ea19b0cab20c8539d987761606.css" integrity="sha256-wxylheezqQ3&#43;sv0KwtfZP/CvguoZsMqyDIU52Yd2FgY=">
 </head>
@@ -729,12 +729,12 @@
 <ol>
 <li>
 <p>Install documentation theme:</p>
-<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh">make theme
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">make theme
+</span></span></code></pre></div></li>
 <li>
 <p>Install <a href="https://gohugo.io/getting-started/installing/"><code>hugo</code> CLI</a>:</p>
-<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh">brew install hugo
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">brew install hugo
+</span></span></code></pre></div></li>
 </ol>
 <h2 id="development">Development</h2>
 <p>In general, the content management follows all the standard features of Hugo.</p>
@@ -744,10 +744,10 @@
 <li><a href="https://gohugo.io/content-management/cross-references/">Cross Referencing</a></li>
 </ul>
 <h3 id="start-hugo-server">Start hugo server</h3>
-<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh">make up
-</code></pre></div><p>Or with <code>hugo</code>:</p>
-<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh">hugo server --buildDrafts
-</code></pre></div><h3 id="add-content">Add Content</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">make up
+</span></span></code></pre></div><p>Or with <code>hugo</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">hugo server --buildDrafts
+</span></span></code></pre></div><h3 id="add-content">Add Content</h3>
 <ol>
 <li>
 <p>Create content as follows:</p>
@@ -759,30 +759,30 @@
 </li>
 <li>
 <p>Edit <a href="https://gohugo.io/content-management/front-matter/">front matter</a></p>
-<div class="highlight"><pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nn">---</span><span class="w">
-</span><span class="w"></span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;My New Content&#34;</span><span class="w">
-</span><span class="w"></span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;short description of content&#34;</span><span class="w">
-</span><span class="w"></span><span class="nt">draft</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
-</span><span class="w"></span><span class="nt">hidden</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
-</span><span class="w"></span><span class="nt">weight</span><span class="p">:</span><span class="w"> </span><span class="m">20</span><span class="w"> </span><span class="c"># ordering by weight</span><span class="w">
-</span><span class="w"></span><span class="nt">keywords</span><span class="p">:</span><span class="w">
-</span><span class="w">  </span>- <span class="l">one</span><span class="w">
-</span><span class="w">  </span>- <span class="l">two</span><span class="w">
-</span><span class="w"></span><span class="nt">tags</span><span class="p">:</span><span class="w">
-</span><span class="w">  </span>- <span class="l">advanced</span><span class="w">
-</span><span class="w">  </span>- <span class="l">oke</span><span class="w">
-</span><span class="w"></span><span class="c">###### Custom ######</span><span class="w">
-</span><span class="w"></span><span class="c"># breadcrumbs</span><span class="w">
-</span><span class="w"></span><span class="nt">disableBreadcrumb</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
-</span><span class="w"></span><span class="c"># footer navigation</span><span class="w">
-</span><span class="w"></span><span class="nt">disablePrevNext</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
-</span><span class="w"></span><span class="nt">disablePrev</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
-</span><span class="w"></span><span class="nt">disableNext</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
-</span><span class="w"></span><span class="c"># section options</span><span class="w">
-</span><span class="w"></span><span class="nt">showChildren</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w"> </span><span class="c"># lists child pages of the section/_index.md</span><span class="w">
-</span><span class="w"></span><span class="nt">orderedChildren</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w"> </span><span class="c"># use ordered list for child pages</span><span class="w">
-</span><span class="w"></span><span class="nn">---</span><span class="w">
-</span></code></pre></div></li>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nn">---</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;My New Content&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;short description of content&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">draft</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">hidden</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">weight</span><span class="p">:</span><span class="w"> </span><span class="m">20</span><span class="w"> </span><span class="c"># ordering by weight</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">keywords</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span>- <span class="l">one</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span>- <span class="l">two</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">tags</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span>- <span class="l">advanced</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span>- <span class="l">oke</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c">###### Custom ######</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c"># breadcrumbs</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">disableBreadcrumb</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c"># footer navigation</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">disablePrevNext</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">disablePrev</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">disableNext</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c"># section options</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">showChildren</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w"> </span><span class="c"># lists child pages of the section/_index.md</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">orderedChildren</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w"> </span><span class="c"># use ordered list for child pages</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nn">---</span><span class="w">
+</span></span></span></code></pre></div></li>
 </ol>
 <h2 id="features">Features</h2>
 <p>The Hugo documentation theme is custom-built with <a href="https://getuikit.com/docs/">UIkit</a> components (just like MuShop storefront).</p>
@@ -790,24 +790,24 @@
 <ul>
 <li>
 <p><strong>Helm</strong>: Displays code blocks specific to helm version</p>
-<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">  ```shell--helm2
-  helm install ./mushop --name mymushop
-  ```
-
-  ```shell--helm3
-  helm upgrade --install mymushop ./mushop
-  ```
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">  ```shell--helm2
+</span></span><span class="line"><span class="cl">  helm install ./mushop --name mymushop
+</span></span><span class="line"><span class="cl">  ```
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  ```shell--helm3
+</span></span><span class="line"><span class="cl">  helm upgrade --install mymushop ./mushop
+</span></span><span class="line"><span class="cl">  ```
+</span></span></code></pre></div></li>
 <li>
 <p><strong>OS</strong>: Displays code blocks specific to os</p>
-<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">  ```shell--linux-macos
-  export MUSHOP_NAMESPACE=mushop
-  ```
-
-  ```shell--win
-  set MUSHOP_NAMESPACE=mushop
-  ```
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">  ```shell--linux-macos
+</span></span><span class="line"><span class="cl">  export MUSHOP_NAMESPACE=mushop
+</span></span><span class="line"><span class="cl">  ```
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  ```shell--win
+</span></span><span class="line"><span class="cl">  set MUSHOP_NAMESPACE=mushop
+</span></span><span class="line"><span class="cl">  ```
+</span></span></code></pre></div></li>
 </ul>
 <h3 id="shortcode-components">Shortcode Components</h3>
 <p>Add panache to the documentation using these custom shortcodes directly within
@@ -816,10 +816,11 @@ markdown documents.</p>
 <blockquote>
 <p>Displays an alert style block. Specify icon from the UIkit <a href="https://getuikit.com/docs/icon#library">icon library</a></p>
 </blockquote>
-<div uk-grid="" class="uk-grid uk-grid-small  uk-child-width-1-1 uk-child-width-1-2@m  uk-flex-top"><div class="highlight"><pre class="chroma"><code class="language-markdown" data-lang="markdown">{{% alert style=&#34;primary&#34; icon=&#34;info&#34; %}}
-Alert content <span class="sb">`processed`</span> as <span class="gs">**markdown**</span>
-{{% /alert %}}
-</code></pre></div><div class="" >
+<div uk-grid="" class="uk-grid uk-grid-small  uk-child-width-1-1 uk-child-width-1-2@m  uk-flex-top"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">uk-alert</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;uk-alert-primary uk-grid uk-grid-collapse uk-flex-nowrap &#34;</span><span class="p">&gt;&lt;</span><span class="nt">span</span> <span class="na">uk-icon</span><span class="o">=</span><span class="s">&#34;icon: info; ratio: 1.2&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;uk-margin-small-right uk-flex-none&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;uk-width-expand&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">Alert content <span class="sb">`processed`</span> as <span class="gs">**markdown**</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span></code></pre></div><div class="" >
   <div uk-alert class="uk-alert-primary uk-grid uk-grid-collapse uk-flex-nowrap "><span uk-icon="icon: info; ratio: 1.2" class="uk-margin-small-right uk-flex-none"></span><div class="uk-width-expand">
     <p>Alert content <code>processed</code> as <strong>markdown</strong></p>
 </div></div>
@@ -860,12 +861,13 @@ Alert content <span class="sb">`processed`</span> as <span class="gs">**markdown
 <blockquote>
 <p>Fix the enclosed content to an aspect ratio.</p>
 </blockquote>
-<div uk-grid="" class="uk-grid uk-grid-small  uk-child-width-1-1 uk-child-width-1-2@m  uk-flex-top"><div class="highlight"><pre class="chroma"><code class="language-markdown" data-lang="markdown">{{% aspect ratio=&#34;2-1&#34; %}}
-{{% wrapper &#34;uk-background-muted uk-padding-small&#34; %}}
-Content with aspect ratio of <span class="sb">`2-1`</span>
-{{% /wrapper %}}
-{{% /aspect %}}
-</code></pre></div><div class="" >
+<div uk-grid="" class="uk-grid uk-grid-small  uk-child-width-1-1 uk-child-width-1-2@m  uk-flex-top"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;rw-aspect rw-aspect-2-1 &#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;uk-background-muted uk-padding-small&#34;</span> <span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Content with aspect ratio of <span class="p">&lt;</span><span class="nt">code</span><span class="p">&gt;</span>2-1<span class="p">&lt;/</span><span class="nt">code</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span></code></pre></div><div class="" >
   <div class="rw-aspect rw-aspect-2-1 "><div class="uk-background-muted uk-padding-small" >
   <p>Content with aspect ratio of <code>2-1</code></p>
 </div>
@@ -894,15 +896,17 @@ Content with aspect ratio of <span class="sb">`2-1`</span>
 <blockquote>
 <p>Display content as cards - usually in a grid</p>
 </blockquote>
-<div uk-grid="" class="uk-grid uk-grid-small  uk-child-width-1-1 uk-child-width-1-2@m  uk-flex-top"><div class="highlight"><pre class="chroma"><code class="language-markdown" data-lang="markdown">{{% grid col=&#34;1-2&#34; %}}
-{{% card style=&#34;primary&#34; title=&#34;Primary&#34; hover=true %}}
-Card body
-{{% /card %}}
-{{% card style=&#34;secondary&#34; title=&#34;Secondary&#34; %}}
-Card body
-{{% /card %}}
-{{% /grid %}}
-</code></pre></div><div class="" >
+<div uk-grid="" class="uk-grid uk-grid-small  uk-child-width-1-1 uk-child-width-1-2@m  uk-flex-top"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">uk-grid</span><span class="o">=</span><span class="s">&#34;&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;uk-grid uk-grid-small  uk-child-width-1-1 uk-child-width-1-2@m  &#34;</span><span class="p">&gt;&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;uk-card uk-card-body uk-card-hover uk-card-primary uk-card- &#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">h3</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;uk-card-title&#34;</span><span class="p">&gt;</span>Primary<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Card body<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;uk-card uk-card-body  uk-card-secondary uk-card- &#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">h3</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;uk-card-title&#34;</span><span class="p">&gt;</span>Secondary<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Card body<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span></code></pre></div><div class="" >
   <div uk-grid="" class="uk-grid uk-grid-small  uk-child-width-1-1 uk-child-width-1-2@m  "><div class="">
   <div class="uk-card uk-card-body uk-card-hover uk-card-primary uk-card- ">
     <h3 class="uk-card-title">Primary</h3><p>Card body</p>
@@ -953,12 +957,12 @@ Card body
 <blockquote>
 <p>Add a grid of inner contents using <a href="https://getuikit.com/docs/grid">grid</a> and <a href="https://getuikit.com/docs/flex">flex</a></p>
 </blockquote>
-<div uk-grid="" class="uk-grid uk-grid-small  uk-child-width-1-1 uk-child-width-1-2@m  uk-flex-top"><div class="highlight"><pre class="chroma"><code class="language-markdown" data-lang="markdown">{{% grid col=&#34;1-3&#34; %}}
-<span class="k">-</span> **Example**
-<span class="k">-</span> Item one
-<span class="k">-</span> Item two
-{{% /grid %}}
-</code></pre></div><div class="" >
+<div uk-grid="" class="uk-grid uk-grid-small  uk-child-width-1-1 uk-child-width-1-2@m  uk-flex-top"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">ul</span> <span class="na">uk-grid</span><span class="o">=</span><span class="s">&#34;&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;uk-grid uk-grid-small  uk-child-width-1-1 uk-child-width-1-3@m  &#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>Example<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Item one<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Item two<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+</span></span></code></pre></div><div class="" >
   <ul uk-grid="" class="uk-grid uk-grid-small  uk-child-width-1-1 uk-child-width-1-3@m  ">
 <li><strong>Example</strong></li>
 <li>Item one</li>
@@ -1008,8 +1012,8 @@ Card body
 <blockquote>
 <p>Add any icon from the <a href="https://getuikit.com/docs/icon#library">library</a></p>
 </blockquote>
-<div uk-grid="" class="uk-grid uk-grid-small  uk-child-width-1-1 uk-child-width-1-2@m  uk-flex-top"><div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">{{&lt; icon &#34;bookmark&#34; &#34;2.5&#34; &gt;}}
-</code></pre></div><p><span uk-icon="icon: bookmark; ratio: 2.5"></span></p></div>
+<div uk-grid="" class="uk-grid uk-grid-small  uk-child-width-1-1 uk-child-width-1-2@m  uk-flex-top"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl"><span uk-icon="icon: bookmark; ratio: 2.5"></span>
+</span></span></code></pre></div><p><span uk-icon="icon: bookmark; ratio: 2.5"></span></p></div>
 <table>
 <thead>
 <tr>
@@ -1033,10 +1037,12 @@ Card body
 <blockquote>
 <p>Applies automatic overflow to the contents. Useful with <a href="#aspect-ratio">aspect ratio</a> and <code>table</code> contents</p>
 </blockquote>
-<div uk-grid="" class="uk-grid uk-grid-small  uk-child-width-1-1 uk-child-width-1-2@m  uk-flex-top"><div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">{{% overflow %}}
-Something very tall or wide
-{{% /overflow %}}
-</code></pre></div><div class="uk-overflow-auto " >
+<div uk-grid="" class="uk-grid uk-grid-small  uk-child-width-1-1 uk-child-width-1-2@m  uk-flex-top"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">&lt;div class=&#34;uk-overflow-auto &#34; &gt;
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">Something very tall or wide
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">&lt;/div&gt;
+</span></span></code></pre></div><div class="uk-overflow-auto " >
   <p>Something very wide</p>
 </div></div>
 <table>
@@ -1062,15 +1068,23 @@ Something very tall or wide
 <blockquote>
 <p>Display list items as a slideshow</p>
 </blockquote>
-<div uk-grid="" class="uk-grid uk-grid-small  uk-child-width-1-1 uk-child-width-1-2@m  uk-flex-top"><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html">{{% slideshow dotnav=true %}}
-{{% list/item &#34;uk-background-secondary uk-light uk-padding&#34; %}}
-Slide one `markdown` CONTENT
-{{% /list/item %}}
-<span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;uk-background-primary uk-light uk-padding&#34;</span><span class="p">&gt;</span>
-  Slide two HTML content
-<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
-{{% /slideshow %}}
-</code></pre></div><div uk-slideshow="animation: slide; finite: true">
+<div uk-grid="" class="uk-grid uk-grid-small  uk-child-width-1-1 uk-child-width-1-2@m  uk-flex-top"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">uk-slideshow</span><span class="o">=</span><span class="s">&#34;animation: slide; finite: true&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;uk-position-relative uk-visible-toggle &#34;</span> <span class="na">tabindex</span><span class="o">=</span><span class="s">&#34;-1&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">ul</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;uk-slideshow-items&#34;</span> <span class="na">ZgotmplZ</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;uk-background-secondary uk-light uk-padding&#34;</span> <span class="p">&gt;&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Slide one <span class="p">&lt;</span><span class="nt">code</span><span class="p">&gt;</span>markdown<span class="p">&lt;/</span><span class="nt">code</span><span class="p">&gt;</span> CONTENT<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;uk-background-primary uk-light uk-padding&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  Slide two HTML content
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;uk-position-center-left uk-position-small uk-hidden-hover&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">uk-slidenav-previous</span> <span class="na">uk-slideshow-item</span><span class="o">=</span><span class="s">&#34;previous&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;uk-position-center-right uk-position-small uk-hidden-hover&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">uk-slidenav-next</span> <span class="na">uk-slideshow-item</span><span class="o">=</span><span class="s">&#34;next&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">ul</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;uk-slideshow-nav uk-dotnav uk-flex-center uk-margin&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span></code></pre></div><div uk-slideshow="animation: slide; finite: true">
   <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1">
     <ul class="uk-slideshow-items" ZgotmplZ><li class="uk-background-secondary uk-padding" ><p>Slide one <code>markdown</code> content</p>
 </li>
@@ -1117,24 +1131,30 @@ Slide one `markdown` CONTENT
 <blockquote>
 <p>Create a tabbed content switcher</p>
 </blockquote>
-<div uk-grid="" class="uk-grid uk-grid-small  uk-child-width-1-1 uk-child-width-1-2@m  uk-flex-top"><div class="highlight"><pre class="chroma"><code class="language-markdown" data-lang="markdown">{{<span class="p">&lt;</span> <span class="nt">switcher</span> <span class="na">left</span><span class="o">=</span><span class="s">true</span> <span class="na">tabs</span><span class="o">=</span><span class="s">&#34;One|Two|Three&#34;</span> <span class="p">&gt;</span>}}
-<span class="k">-</span> Tab one content
-    ```ts
-    const foo: string = &#39;bar&#39;;
-    ```
-<span class="k">-</span> Tab two content
-<span class="k">-</span> Tab three content
-{{<span class="p">&lt;</span> <span class="p">/</span><span class="nt">switcher</span> <span class="p">&gt;</span>}}
-</code></pre></div><div class="" >
-  <div uk-grid class=" uk-margin-bottom uk-grid-small ">
+<div uk-grid="" class="uk-grid uk-grid-small  uk-child-width-1-1 uk-child-width-1-2@m  uk-flex-top"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl"><div uk-grid class=" uk-margin-bottom uk-grid-small ">
   <div class="uk-width-1-1 uk-width-auto@m">
-    <ul class="uk-tab-left uk-text-large" uk-tab="connect: #switcher-141"><li><a href="#">One</a></li><li><a href="#">Two</a></li><li><a href="#">Three</a></li></ul>
+    <ul class="uk-tab-left uk-text-large" uk-tab="connect: #switcher-23"><li><a href="#">One</a></li><li><a href="#">Two</a></li><li><a href="#">Three</a></li></ul>
   </div>
   <div class="uk-width-expand@m">
-    <ul id='switcher-141' class='uk-switcher'>
+    <ul id='switcher-23' class='uk-switcher'>
 <li>Tab one content
-<div class="highlight"><pre class="chroma"><code class="language-ts" data-lang="ts"><span class="kr">const</span> <span class="nx">foo</span>: <span class="kt">string</span> <span class="o">=</span> <span class="s1">&#39;bar&#39;</span><span class="p">;</span>
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ts" data-lang="ts"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">foo</span>: <span class="kt">string</span> <span class="o">=</span> <span class="s1">&#39;bar&#39;</span><span class="p">;</span>
+</span></span></code></pre></div></li>
+<li>Tab two content</li>
+<li>Tab three content</li>
+</ul>
+  </div>
+</div>
+</span></span></code></pre></div><div class="" >
+  <div uk-grid class=" uk-margin-bottom uk-grid-small ">
+  <div class="uk-width-1-1 uk-width-auto@m">
+    <ul class="uk-tab-left uk-text-large" uk-tab="connect: #switcher-289"><li><a href="#">One</a></li><li><a href="#">Two</a></li><li><a href="#">Three</a></li></ul>
+  </div>
+  <div class="uk-width-expand@m">
+    <ul id='switcher-289' class='uk-switcher'>
+<li>Tab one content
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ts" data-lang="ts"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">foo</span>: <span class="kt">string</span> <span class="o">=</span> <span class="s1">&#39;bar&#39;</span><span class="p">;</span>
+</span></span></code></pre></div></li>
 <li>Tab two content</li>
 <li>Tab three content</li>
 </ul>
@@ -1169,12 +1189,11 @@ Slide one `markdown` CONTENT
 <p>Specify inner width after breakpoint according to the <a href="https://getuikit.com/docs/width">docs</a></p>
 </blockquote>
 <p><code>width &lt;width&gt; [breakpoint]</code></p>
-<div uk-grid="" class="uk-grid uk-grid-small  uk-child-width-1-1 uk-child-width-1-2@m  uk-flex-top"><div class="highlight"><pre class="chroma"><code class="language-markdown" data-lang="markdown">{{% width &#34;1-2&#34; &#34;s&#34; %}}
-{{% alert style=&#34;danger&#34; %}}
-![<span class="nt">image</span>](<span class="na">../images/oracle.svg</span>)
-{{% /alert %}}
-{{% /width %}}
-</code></pre></div><div class="" >
+<div uk-grid="" class="uk-grid uk-grid-small  uk-child-width-1-1 uk-child-width-1-2@m  uk-flex-top"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl"><div class="uk-margin-auto uk-width-1-1 uk-width-1-2@s"><div uk-alert class="uk-alert-danger uk-grid uk-grid-collapse uk-flex-nowrap "><div class="uk-width-expand">
+    <p><img src="../images/oracle.svg" alt="image"></p>
+</div></div>
+</div>
+</span></span></code></pre></div><div class="" >
   <div class="uk-margin-auto uk-width-1-1 uk-width-1-2@s"><div uk-alert class="uk-alert-danger uk-grid uk-grid-collapse uk-flex-nowrap "><div class="uk-width-expand">
     <p><img src="../images/oracle.svg" alt="image"></p>
 </div></div>
@@ -1203,10 +1222,12 @@ Slide one `markdown` CONTENT
 <blockquote>
 <p>Wraps inner content with any <code>div</code> and specified classes. Useful for specifying markup with other UIkit features</p>
 </blockquote>
-<div uk-grid="" class="uk-grid uk-grid-small  uk-child-width-1-1 uk-child-width-1-2@m  uk-flex-top"><div class="highlight"><pre class="chroma"><code class="language-markdown" data-lang="markdown">{{% wrapper &#34;uk-light uk-background-primary uk-panel uk-padding&#34; %}}
-Light Panel
-{{% /wrapper %}}
-</code></pre></div><div class="" >
+<div uk-grid="" class="uk-grid uk-grid-small  uk-child-width-1-1 uk-child-width-1-2@m  uk-flex-top"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;uk-light uk-background-primary uk-panel uk-padding&#34;</span> <span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">Light Panel
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span></code></pre></div><div class="" >
   <div class="uk-light uk-background-primary uk-panel uk-padding" >
   <p>Light Panel</p>
 </div>
@@ -1235,14 +1256,14 @@ Light Panel
 <blockquote>
 <p>Markdownish SVG diagrams from <a href="https://mermaid-js.github.io/mermaid/#/">mermaid</a></p>
 </blockquote>
-<div uk-grid="" class="uk-grid uk-grid-small  uk-child-width-1-1 uk-child-width-1-2@m  uk-flex-top"><div class="highlight"><pre class="chroma"><code class="language-markdown" data-lang="markdown">{{<span class="p">&lt;</span> <span class="nt">mermaid</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;uk-text-center&#34;</span> <span class="p">&gt;</span>}}
+<div uk-grid="" class="uk-grid uk-grid-small  uk-child-width-1-1 uk-child-width-1-2@m  uk-flex-top"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl"><div class="mermaid uk-text-center">
 graph TD
-  A[Hard edge] --&gt;|Link text| B(Round edge)
-  B --&gt; C{Decision}
-  C --&gt;|One| D[Result one]
-  C --&gt;|Two| E[Result two]
-{{<span class="p">&lt;</span> <span class="p">/</span><span class="nt">mermaid</span> <span class="p">&gt;</span>}}
-</code></pre></div><div class="mermaid uk-text-center">
+  A[Hard edge] -->|Link text| B(Round edge)
+  B --> C{Decision}
+  C -->|One| D[Result one]
+  C -->|Two| E[Result two]
+</div>
+</span></span></code></pre></div><div class="mermaid uk-text-center">
 graph TD
   A[Hard edge] -->|Link text| B(Round edge)
   B --> C{Decision}
@@ -1686,6 +1707,6 @@ graph TD
   })(window, window.Site = window.Site || {});
 </script>
 
-<script src="../js/vendor.min.635fbc23a7f80d0fcee6728a32611ece1edb8302f818f627011b23dc8de8c6d4.js" ></script><script src="../js/extras.min.a9bf7ac5b6f2ffe1f85649105cb5f3065ab48c7ce45fa8efd51bce9622933221.js"  async></script><script src="../js/site.min.5a6d5008222f09cfe0ff51eb81d80c68d7d2fa56fa9ea1dd327f239f4c5d044d.js"  async></script>
+<script src="../js/vendor.min.22a7d4ab360294cf81c935c68f455e79a47ad466b0c0a8bbae43e18e077126d5.js" ></script><script src="../js/extras.min.c3eae648dd298c20417b7afd4d30cdff6b90d92b9efb5c3c4feda35e243e0520.js"  async></script><script src="../js/site.min.243b7d1622f73914ae7e7a6698f22c9d050d5a78d281d6eaf56d16a11e446093.js"  async></script>
   </body>
 </html>

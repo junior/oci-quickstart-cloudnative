@@ -19,7 +19,7 @@
   <meta name="msapplication-TileColor" content="#c74634">
   <meta name="theme-color" content="#fcfbfa">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-  <link rel="stylesheet" type="text/css" href="../../sass/main.min.579b1ef900caab9f4034f2fab782c459ab9ddb6c2dd914fed6155812ffd82484.css" integrity="sha256-V5se&#43;QDKq59ANPL6t4LEWaud22wt2RT&#43;1hVYEv/YJIQ=">
+  <link rel="stylesheet" type="text/css" href="../../sass/main.min.dbe9c3072d7bdad30ac85b1cb73ead5c6a4aff7886c67d30be6a911035f04a4f.css" integrity="sha256-2&#43;nDBy172tMKyFsctz6tXGpK/3iGxn0wvmqREDXwSk8=">
   <link rel="stylesheet" type="text/css" href="../../fonts/fonts.min.58744946497c59fa8a6ac77636ea480457079e54512cf3dcb552592b56503cc1.css" integrity="sha256-WHRJRkl8WfqKasd2NupIBFcHnlRRLPPctVJZK1ZQPME=">
   <link rel="stylesheet" type="text/css" href="../../sass/mushop.min.c31ca585e7b3a90dfeb2fd0ac2d7d93ff0af82ea19b0cab20c8539d987761606.css" integrity="sha256-wxylheezqQ3&#43;sv0KwtfZP/CvguoZsMqyDIU52Yd2FgY=">
 </head>
@@ -726,67 +726,67 @@
 <ol>
 <li>
 <p>Download the latest Istio release (<code>1.4.6</code> at the time of writing this):</p>
-<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">curl -L https://istio.io/downloadIstio <span class="p">|</span> sh -
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">curl -L https://istio.io/downloadIstio <span class="p">|</span> sh -
+</span></span></code></pre></div></li>
 <li>
 <p>Go to the <code>istio-1.4.6</code> folder and add the <code>istioctl</code> to your path:</p>
-<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell"><span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="nv">$PWD</span>/bin:<span class="nv">$PATH</span>
-</code></pre></div><p>Before you continue with Istio installation, run the <code>verify-install</code> command to make sure Istio can be installed on your cluster:</p>
-<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">$ istioctl verify-install
-...
-Install Pre-Check passed! The cluster is ready <span class="k">for</span> Istio installation.
-</code></pre></div><p>If you get the <code>Pre-Check passed</code> message, you can continue.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="nv">$PWD</span>/bin:<span class="nv">$PATH</span>
+</span></span></code></pre></div><p>Before you continue with Istio installation, run the <code>verify-install</code> command to make sure Istio can be installed on your cluster:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ istioctl verify-install
+</span></span><span class="line"><span class="cl">...
+</span></span><span class="line"><span class="cl">Install Pre-Check passed! The cluster is ready <span class="k">for</span> Istio installation.
+</span></span></code></pre></div><p>If you get the <code>Pre-Check passed</code> message, you can continue.</p>
 </li>
 <li>
 <p>Install the Istio <code>demo</code> profile:</p>
-<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">istioctl manifest apply --set <span class="nv">profile</span><span class="o">=</span>demo
-</code></pre></div> <div uk-alert class="uk-alert-primary uk-grid uk-grid-collapse uk-flex-nowrap "><span uk-icon="icon: warning; ratio: 1.2" class="uk-margin-small-right uk-flex-none"></span><div class="uk-width-expand">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">istioctl manifest apply --set <span class="nv">profile</span><span class="o">=</span>demo
+</span></span></code></pre></div> <div uk-alert class="uk-alert-primary uk-grid uk-grid-collapse uk-flex-nowrap "><span uk-icon="icon: warning; ratio: 1.2" class="uk-margin-small-right uk-flex-none"></span><div class="uk-width-expand">
 <p>Istio supports different installation profiles such as <em>default</em>, <em>demo</em>, <em>minimal</em>,
 <em>sds</em> and <em>remote</em>. In this lab we will be using the <em>demo</em> installation as it contains all components and it is designed to showcase Istio functionality. Note that <em>demo</em>
 profile is <strong>NOT</strong> an appropriate installation for production.</p>
  </div></div>
 <p>The output of the above command should look something like this:</p>
-<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">$ istioctl manifest apply --set profile=demo
-- Applying manifest for component Base...
-✔ Finished applying manifest for component Base.
-- Applying manifest for component EgressGateway...
-- Applying manifest for component Prometheus...
-- Applying manifest for component Pilot...
-- Applying manifest for component Tracing...
-- Applying manifest for component Citadel...
-- Applying manifest for component Injector...
-- Applying manifest for component Galley...
-- Applying manifest for component Kiali...
-- Applying manifest for component IngressGateway...
-- Applying manifest for component Policy...
-- Applying manifest for component Telemetry...
-- Applying manifest for component Grafana...
-✔ Finished applying manifest for component Galley.
-✔ Finished applying manifest for component Kiali.
-✔ Finished applying manifest for component Injector.
-✔ Finished applying manifest for component Prometheus.
-✔ Finished applying manifest for component Citadel.
-✔ Finished applying manifest for component Pilot.
-✔ Finished applying manifest for component Policy.
-✔ Finished applying manifest for component IngressGateway.
-✔ Finished applying manifest for component Tracing.
-✔ Finished applying manifest for component EgressGateway.
-✔ Finished applying manifest for component Telemetry.
-✔ Finished applying manifest for component Grafana.
-✔ Installation complete
-</code></pre></div><p>You also need to run <code>kubectl get pods -n istio-system</code> and ensure all pods are in the running state (the value of the <code>STATUS</code> column for each pod should be <code>Running</code>)</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">$ istioctl manifest apply --set profile=demo
+</span></span><span class="line"><span class="cl">- Applying manifest for component Base...
+</span></span><span class="line"><span class="cl">✔ Finished applying manifest for component Base.
+</span></span><span class="line"><span class="cl">- Applying manifest for component EgressGateway...
+</span></span><span class="line"><span class="cl">- Applying manifest for component Prometheus...
+</span></span><span class="line"><span class="cl">- Applying manifest for component Pilot...
+</span></span><span class="line"><span class="cl">- Applying manifest for component Tracing...
+</span></span><span class="line"><span class="cl">- Applying manifest for component Citadel...
+</span></span><span class="line"><span class="cl">- Applying manifest for component Injector...
+</span></span><span class="line"><span class="cl">- Applying manifest for component Galley...
+</span></span><span class="line"><span class="cl">- Applying manifest for component Kiali...
+</span></span><span class="line"><span class="cl">- Applying manifest for component IngressGateway...
+</span></span><span class="line"><span class="cl">- Applying manifest for component Policy...
+</span></span><span class="line"><span class="cl">- Applying manifest for component Telemetry...
+</span></span><span class="line"><span class="cl">- Applying manifest for component Grafana...
+</span></span><span class="line"><span class="cl">✔ Finished applying manifest for component Galley.
+</span></span><span class="line"><span class="cl">✔ Finished applying manifest for component Kiali.
+</span></span><span class="line"><span class="cl">✔ Finished applying manifest for component Injector.
+</span></span><span class="line"><span class="cl">✔ Finished applying manifest for component Prometheus.
+</span></span><span class="line"><span class="cl">✔ Finished applying manifest for component Citadel.
+</span></span><span class="line"><span class="cl">✔ Finished applying manifest for component Pilot.
+</span></span><span class="line"><span class="cl">✔ Finished applying manifest for component Policy.
+</span></span><span class="line"><span class="cl">✔ Finished applying manifest for component IngressGateway.
+</span></span><span class="line"><span class="cl">✔ Finished applying manifest for component Tracing.
+</span></span><span class="line"><span class="cl">✔ Finished applying manifest for component EgressGateway.
+</span></span><span class="line"><span class="cl">✔ Finished applying manifest for component Telemetry.
+</span></span><span class="line"><span class="cl">✔ Finished applying manifest for component Grafana.
+</span></span><span class="line"><span class="cl">✔ Installation complete
+</span></span></code></pre></div><p>You also need to run <code>kubectl get pods -n istio-system</code> and ensure all pods are in the running state (the value of the <code>STATUS</code> column for each pod should be <code>Running</code>)</p>
 <p>Before continuing with the Mushop deployment, you also need to label the <code>mushop</code> namespace in order for Istio to automatically inject the Envoy sidecar proxy next to each Mushop service.</p>
 </li>
 <li>
 <p>Create the <code>mushop</code> namespace:</p>
 </li>
 </ol>
-<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">kubectl create ns mushop
-</code></pre></div><ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">kubectl create ns mushop
+</span></span></code></pre></div><ol>
 <li>Label the namespace with <code>istio-injection=enabled</code>:</li>
 </ol>
-<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">kubectl label namespace mushop istio-injection<span class="o">=</span>enabled
-</code></pre></div><ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">kubectl label namespace mushop istio-injection<span class="o">=</span>enabled
+</span></span></code></pre></div><ol>
 <li>Follow the instructions for <a href="#deployment">deploying Mushop</a>.</li>
 </ol>
 <h2 id="creating-istio-resources">Creating Istio resources</h2>
@@ -794,7 +794,7 @@ profile is <strong>NOT</strong> an appropriate installation for production.</p>
 <ol>
 <li>
 <p>Deploy a Gateway resource:</p>
-<pre><code class="language-shell--macos-linux" data-lang="shell--macos-linux">cat &lt;&lt; EOF | kubectl apply -f -
+<pre tabindex="0"><code class="language-shell--macos-linux" data-lang="shell--macos-linux">cat &lt;&lt; EOF | kubectl apply -f -
 apiVersion: networking.istio.io/v1alpha3
 kind: Gateway
 metadata:
@@ -809,9 +809,9 @@ spec:
         name: http
         protocol: HTTP
       hosts:
-        - '*'
+        - &#39;*&#39;
 EOF
-</code></pre><pre><code class="language-shell--win" data-lang="shell--win">&quot;apiVersion: networking.istio.io/v1alpha3
+</code></pre><pre tabindex="0"><code class="language-shell--win" data-lang="shell--win">&#34;apiVersion: networking.istio.io/v1alpha3
 kind: Gateway
 metadata:
   name: gateway
@@ -825,11 +825,11 @@ spec:
         name: http
         protocol: HTTP
       hosts:
-        - '*'&quot; | kubectl apply -f -
+        - &#39;*&#39;&#34; | kubectl apply -f -
 </code></pre></li>
 <li>
 <p>Deploy a VirtualService:</p>
-<pre><code class="language-shell--macos-linux" data-lang="shell--macos-linux">cat &lt;&lt;EOF | kubectl apply -f -
+<pre tabindex="0"><code class="language-shell--macos-linux" data-lang="shell--macos-linux">cat &lt;&lt;EOF | kubectl apply -f -
 apiVersion: networking.istio.io/v1alpha3
 kind: VirtualService
 metadata:
@@ -837,7 +837,7 @@ metadata:
   namespace: mushop
 spec:
   hosts:
-    - '*'
+    - &#39;*&#39;
   gateways:
     - gateway
   http:
@@ -861,14 +861,14 @@ spec:
         port:
           number: 80
 EOF
-</code></pre><pre><code class="language-shell--win" data-lang="shell--win">&quot;apiVersion: networking.istio.io/v1alpha3
+</code></pre><pre tabindex="0"><code class="language-shell--win" data-lang="shell--win">&#34;apiVersion: networking.istio.io/v1alpha3
 kind: VirtualService
 metadata:
   name: edge
   namespace: mushop
 spec:
   hosts:
-    - '*'
+    - &#39;*&#39;
   gateways:
     - gateway
   http:
@@ -890,13 +890,13 @@ spec:
     - destination:
         host: mushop-storefront.mushop.svc.cluster.local
         port:
-          number: 80&quot; | kubectl apply -f -
+          number: 80&#34; | kubectl apply -f -
 </code></pre></li>
 <li>
 <p>Open a browser with the <code>EXTERNAL-IP</code> of the Instio ingress gateway:</p>
-<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">kubectl get svc istio-ingressgateway <span class="se">\
-</span><span class="se"></span>  --namespace istio-system
-</code></pre></div><blockquote>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">kubectl get svc istio-ingressgateway <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>  --namespace istio-system
+</span></span></code></pre></div><blockquote>
 <p>Locating <code>EXTERNAL-IP</code> for Istio Ingress Gateway. <strong>NOTE</strong> this will be
 <a href="https://localhost">localhost</a> on local clusters.</p>
 </blockquote>
@@ -907,8 +907,8 @@ spec:
 <ol>
 <li>
 <p>From the terminal, open Kiali dashboard</p>
-<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">istioctl dashboard kiali
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">istioctl dashboard kiali
+</span></span></code></pre></div></li>
 <li>
 <p>Click the <strong>Graph</strong> option from the sidebar.</p>
 </li>
@@ -922,8 +922,8 @@ spec:
 </ol>
 <h2 id="cleanup">Cleanup</h2>
 <p>Uninstall Istio by passing the generated manifests into <code>kubectl delete</code></p>
-<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">istioctl manifest generate --set <span class="nv">profile</span><span class="o">=</span>demo <span class="p">|</span> kubectl delete -f -
-</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">istioctl manifest generate --set <span class="nv">profile</span><span class="o">=</span>demo <span class="p">|</span> kubectl delete -f -
+</span></span></code></pre></div>
 
             </main>
           </div> 
@@ -1357,6 +1357,6 @@ spec:
   })(window, window.Site = window.Site || {});
 </script>
 
-<script src="../../js/vendor.min.635fbc23a7f80d0fcee6728a32611ece1edb8302f818f627011b23dc8de8c6d4.js" ></script><script src="../../js/extras.min.a9bf7ac5b6f2ffe1f85649105cb5f3065ab48c7ce45fa8efd51bce9622933221.js"  async></script><script src="../../js/site.min.5a6d5008222f09cfe0ff51eb81d80c68d7d2fa56fa9ea1dd327f239f4c5d044d.js"  async></script>
+<script src="../../js/vendor.min.22a7d4ab360294cf81c935c68f455e79a47ad466b0c0a8bbae43e18e077126d5.js" ></script><script src="../../js/extras.min.c3eae648dd298c20417b7afd4d30cdff6b90d92b9efb5c3c4feda35e243e0520.js"  async></script><script src="../../js/site.min.243b7d1622f73914ae7e7a6698f22c9d050d5a78d281d6eaf56d16a11e446093.js"  async></script>
   </body>
 </html>
