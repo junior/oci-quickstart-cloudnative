@@ -636,9 +636,6 @@
     target="html" ><button class="uk-button uk-button-small uk-button-secondary
     uk-active" toggle="stg-helm-3" >
       3.x
-    </button><button class="uk-button uk-button-small uk-button-secondary
-    " toggle="stg-helm-2" >
-      2.x
     </button></div>
 </li>
 </ul>
@@ -652,7 +649,7 @@
   <div class="uk-margin-small">
     Made with <span uk-icon="icon: heart; ratio: 0.75"></span> by Oracle Developers
   </div>
-  Copyright © 2022 Oracle and/or its affiliates. All rights reserved.
+  Copyright © 2024 Oracle and/or its affiliates. All rights reserved.
 </div>
       </section>
     </div>
@@ -781,10 +778,10 @@ values:</p>
 </table>
 <div uk-grid class="switcher-border uk-margin-bottom uk-grid-small ">
   <div class="uk-width-1-1 ">
-    <ul class="uk-tab" uk-tab="connect: #switcher-278"><li><a href="#">Manual Steps</a></li><li><a href="#">Automated (Using OCI Service Broker)</a></li></ul>
+    <ul class="uk-tab" uk-tab="connect: #switcher-212"><li><a href="#">Manual Steps</a></li><li><a href="#"> **Deprecated** Automated (Using OCI Service Broker)</a></li></ul>
   </div>
   <div class="">
-    <ul id='switcher-278' class='uk-switcher'>
+    <ul id='switcher-212' class='uk-switcher'>
 <li>
 <p>Follow the steps outlined below to provision and configure the cluster with cloud service connection details.</p>
 <h3 id="atp-database">ATP Database</h3>
@@ -1076,8 +1073,9 @@ may be omitted if using the automated service broker approach.</p>
   --name mushop \
   --namespace mushop \
   --values myvalues.yaml
-</code></pre><pre><code class="language-shell--helm3" data-lang="shell--helm3">helm install mushop ./mushop \
+</code></pre><pre><code class="language-shell--helm3" data-lang="shell--helm3">helm upgrade --install mushop ./mushop \
   --namespace mushop \
+  --create-namespace \
   --values myvalues.yaml
 </code></pre></li>
 <li>
