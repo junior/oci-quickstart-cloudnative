@@ -747,34 +747,32 @@ export FAILOVER_REGION=us-ashburn-1
 <p>Do refer the autonomous database password criteria&rsquo;s <a href="https://docs.oracle.com/en/cloud/paas/autonomous-database/adbsa/manage-users-create.html#GUID-72DFAF2A-C4C3-4FAC-A75B-846CC6EDBA3F">here</a></p>
 <h3 id="setup-adb-autonomous-database">Setup ADB (Autonomous Database)</h3>
 <ul>
-<li>
-<p>Create the Source ADB (Autonomous Database)</p>
+<li>Create the Source ADB (Autonomous Database)</li>
+</ul>
 <div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">    oci db autonomous-database create --compartment-id <span class="si">${</span><span class="nv">COMPARTMENT_ID</span><span class="si">}</span> <span class="se">\
 </span><span class="se"></span>    --db-name <span class="si">${</span><span class="nv">DB_NAME</span><span class="si">}</span> --admin-password <span class="si">${</span><span class="nv">DB_PASSWORD</span><span class="si">}</span> --db-version 19c <span class="se">\
 </span><span class="se"></span>    --cpu-core-count <span class="m">1</span> --data-storage-size-in-tbs <span class="m">1</span> <span class="se">\
 </span><span class="se"></span>    --display-name <span class="si">${</span><span class="nv">DB_DISPLAY_NAME</span><span class="si">}</span> --region <span class="si">${</span><span class="nv">PRIMARY_REGION</span><span class="si">}</span>
-</code></pre></div></li>
-<li>
-<p>Fetch the Source ADB (Autonomous Database) OCID</p>
+</code></pre></div><ul>
+<li>Fetch the Source ADB (Autonomous Database) OCID</li>
+</ul>
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">    <span class="nv">DB_ID</span><span class="o">=</span><span class="k">$(</span>oci db autonomous-database list -c <span class="si">${</span><span class="nv">COMPARTMENT_ID</span><span class="si">}</span> <span class="se">\
 </span><span class="se"></span>    --region <span class="si">${</span><span class="nv">PRIMARY_REGION</span><span class="si">}</span> --display-name <span class="nv">$DB_NAME</span> <span class="se">\
 </span><span class="se"></span>    --query <span class="s2">&#34;data[?\&#34;db-name\&#34;==&#39;</span><span class="si">${</span><span class="nv">DB_NAME</span><span class="si">}</span><span class="s2">&#39;].id | [0]&#34;</span> --raw-output<span class="k">)</span>
-</code></pre></div></li>
-<li>
-<p>Create the DR ADB (Autonomous Database)</p>
+</code></pre></div><ul>
+<li>Create the DR ADB (Autonomous Database)</li>
+</ul>
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">    oci db autonomous-database create-adb-cross-region-data-guard-details <span class="se">\
 </span><span class="se"></span>    --compartment-id <span class="si">${</span><span class="nv">COMPARTMENT_ID</span><span class="si">}</span> --db-name <span class="si">${</span><span class="nv">DB_NAME</span><span class="si">}</span> --source-id <span class="si">${</span><span class="nv">DB_ID</span><span class="si">}</span> <span class="se">\
 </span><span class="se"></span>    --cpu-core-count <span class="m">1</span> --data-storage-size-in-tbs <span class="m">1</span> <span class="se">\
 </span><span class="se"></span>    --region <span class="si">${</span><span class="nv">FAILOVER_REGION</span><span class="si">}</span> --db-version 19c
-</code></pre></div></li>
-<li>
-<p>Download and extract autonomous database wallet from source ADB</p>
+</code></pre></div><ul>
+<li>Download and extract autonomous database wallet from source ADB</li>
+</ul>
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">    oci db autonomous-database generate-wallet --autonomous-database-id <span class="si">${</span><span class="nv">DB_ID</span><span class="si">}</span><span class="se">\
 </span><span class="se"></span>    --password <span class="si">${</span><span class="nv">WALLET_PW</span><span class="si">}</span> --file <span class="si">${</span><span class="nv">WALLET_ZIP</span><span class="si">}</span> --region <span class="nv">$PRIMARY_REGION</span>
 </code></pre></div><div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">    unzip <span class="si">${</span><span class="nv">WALLET_ZIP</span><span class="si">}</span> -d /tmp/wallet_source
-</code></pre></div></li>
-</ul>
-<div uk-alert class="uk-alert-information uk-grid uk-grid-collapse uk-flex-nowrap "><span uk-icon="icon: information; ratio: 1.2" class="uk-margin-small-right uk-flex-none"></span><div class="uk-width-expand">
+</code></pre></div><div uk-alert class="uk-alert-information uk-grid uk-grid-collapse uk-flex-nowrap "><span uk-icon="icon: information; ratio: 1.2" class="uk-margin-small-right uk-flex-none"></span><div class="uk-width-expand">
 <p>Keep this wallet handy as we will need to add it as OKE secret later on.</p>
 <p>The database wallet on standby(DR) will not be available for download until the failover.
 The wallet has to be separately downloaded for primary and remote region&rsquo;s as tnsnames.ora DNS entries are different.</p>
@@ -817,16 +815,13 @@ The wallet has to be separately downloaded for primary and remote region&rsquo;s
 </code></pre></div></li>
 </ul>
 <p>Sample Output:</p>
-<pre><code>```yaml
-global:
-ociAuthSecret: oci-credentials        # OCI authentication credentials secret name
-ossStreamSecret:                      # Name of Stream Connection secret
-oadbAdminSecret: oadb-admin           # Name of DB Admin secret created earlier
-oadbWalletSecret: oadb-wallet         # Name of wallet secret created earlier
-oadbConnectionSecret: oadb-connection # Name of connection secret created earlier
-```
-</code></pre>
-<ul>
+<div class="highlight"><pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">global</span><span class="p">:</span><span class="w">
+</span><span class="w"></span><span class="nt">ociAuthSecret</span><span class="p">:</span><span class="w"> </span><span class="l">oci-credentials       </span><span class="w"> </span><span class="c"># OCI authentication credentials secret name</span><span class="w">
+</span><span class="w"></span><span class="nt">ossStreamSecret</span><span class="p">:</span><span class="w">                      </span><span class="c"># Name of Stream Connection secret</span><span class="w">
+</span><span class="w"></span><span class="nt">oadbAdminSecret</span><span class="p">:</span><span class="w"> </span><span class="l">oadb-admin          </span><span class="w"> </span><span class="c"># Name of DB Admin secret created earlier</span><span class="w">
+</span><span class="w"></span><span class="nt">oadbWalletSecret</span><span class="p">:</span><span class="w"> </span><span class="l">oadb-wallet        </span><span class="w"> </span><span class="c"># Name of wallet secret created earlier</span><span class="w">
+</span><span class="w"></span><span class="nt">oadbConnectionSecret</span><span class="p">:</span><span class="w"> </span><span class="l">oadb-connection</span><span class="w"> </span><span class="c"># Name of connection secret created earlier</span><span class="w">
+</span></code></pre></div><ul>
 <li>
 <p>Install MuShop</p>
 <pre><code class="language-shell--helm3" data-lang="shell--helm3">helm upgrade --install -f ./mushop/values-prod.yaml \
@@ -890,11 +885,8 @@ section and create a OKE cluster at the DR region.</p>
 </code></pre></div></li>
 </ul>
 <p>Extract the wallet</p>
-<pre><code>```bash
-unzip &lt;wallet_zip_file&gt; -d /tmp/wallet_remote
-```
-</code></pre>
-<ul>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">unzip &lt;wallet_zip_file&gt; -d /tmp/wallet_remote
+</code></pre></div><ul>
 <li>
 <p>Create the secrets, set the region as <code>us-ashburn-1</code> in this case</p>
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">kubectl create secret generic oci-credentials <span class="se">\
@@ -921,16 +913,13 @@ unzip &lt;wallet_zip_file&gt; -d /tmp/wallet_remote
 </code></pre></div></li>
 </ul>
 <p>Sample Output:</p>
-<pre><code>```yaml
-global:
-ociAuthSecret: oci-credentials        # OCI authentication credentials secret name
-ossStreamSecret:                      # Name of Stream Connection secret
-oadbAdminSecret: oadb-admin           # Name of DB Admin secret created earlier
-oadbWalletSecret: oadb-wallet         # Name of wallet secret created earlier
-oadbConnectionSecret: oadb-connection # Name of connection secret created earlier
-```
-</code></pre>
-<ul>
+<div class="highlight"><pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">global</span><span class="p">:</span><span class="w">
+</span><span class="w"></span><span class="nt">ociAuthSecret</span><span class="p">:</span><span class="w"> </span><span class="l">oci-credentials       </span><span class="w"> </span><span class="c"># OCI authentication credentials secret name</span><span class="w">
+</span><span class="w"></span><span class="nt">ossStreamSecret</span><span class="p">:</span><span class="w">                      </span><span class="c"># Name of Stream Connection secret</span><span class="w">
+</span><span class="w"></span><span class="nt">oadbAdminSecret</span><span class="p">:</span><span class="w"> </span><span class="l">oadb-admin          </span><span class="w"> </span><span class="c"># Name of DB Admin secret created earlier</span><span class="w">
+</span><span class="w"></span><span class="nt">oadbWalletSecret</span><span class="p">:</span><span class="w"> </span><span class="l">oadb-wallet        </span><span class="w"> </span><span class="c"># Name of wallet secret created earlier</span><span class="w">
+</span><span class="w"></span><span class="nt">oadbConnectionSecret</span><span class="p">:</span><span class="w"> </span><span class="l">oadb-connection</span><span class="w"> </span><span class="c"># Name of connection secret created earlier</span><span class="w">
+</span></code></pre></div><ul>
 <li>
 <p>Install MuShop</p>
 <pre><code class="language-shell--helm3" data-lang="shell--helm3">helm upgrade --install -f ./mushop/values-prod.yaml \
